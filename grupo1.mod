@@ -15,6 +15,8 @@ param DemandaMax {PRODUCTOS,CLIENTES} >=0;
 #Demanda maxima que solicita cada cliente de el producto
 param Precio {PRODUCTOS,CLIENTES} >= 0;
 #Precio al que me compra el cliente cada producto
+param FactorConversion {PRODUCTOS} >= 0;
+#Factor de conversion de productos a alcachofas
 
 param TipoEtapas {ETAPAS}; #Parametro que dice el tipo de las etapas
 
@@ -34,19 +36,23 @@ set EtapasCoste within ETAPAS := {e in ETAPAS: CosteInicio[e] > 0};
 #La cantidad de dinero que hay que gastar para activar cada etapa
 
 param Receta {PRODUCTOS,ETAPAS};
-set Orden {p in PRODUCTOS} within ETAPAS := {e in ETAPAS: Receta[p,e] = 1} union {0};
+set Orden {p in PRODUCTOS} within ETAPAS := {e in ETAPAS: Receta[p,e] = 1};
+set OrdenCompleto {p in PRODUCTOS} := Orden[p] union {last(ETAPASCOMPLETO)};
 #El orden que sigue cada producto de las etapas y una matriz auxiliar binaria
 
-var Cantidad {p in PRODUCTOS,Orden[p] diff {0},HORAS} integer >= 0; 
+set OrdenInvs {e in ETAPAS} within PRODUCTOS := {p in PRODUCTOS: e in Orden[p]};
+#Orden inverso
+
+var Cantidad {p in PRODUCTOS, OrdenCompleto[p], HORAS} integer >= 0, <= CantAlcach/FactorConversion[p]; 
 #Cantidad de producto que esta esperando en cierta etapa a una hora dada
-var Ratio {PRODUCTOS,ETAPAS,HORAS}integer >=0;
+var Ratio {p in PRODUCTOS,e in OrdenCompleto[p],HORAS}integer >=0, <=RatioMax[p,e];
 #Cantidad de producto que procesa una etapa en una hora dada
-var Vender {PRODUCTOS,CLIENTES};
-#Cantidad de producto vendido a un cliente
-var Ocupado {PRODUCTOS,ETAPAS,HORAS} binary;
+var Ocupado {PRODUCTOS,Orden[p],HORAS} binary;
 #1 si el producto dado esta en la etapa dada en la hora dada
-var Encendido {ETAPAS,HORAS} binary;
+var Encendido {EtapasCoste,HORAS} binary;
 #1 si la etapa dada esta produciendo en la hora dada
+var Vender {p in PRODUCTOS,c in CLIENTES} integer >=DemandaMin[p,c], <=DemandaMax[p,c];
+#Cantidad de producto vendido a un cliente
 
 param Ingresos := sum{p in PRODUCTOS, c in CLIENTES} Vender[p,c]*Precio[p,c];
 param Mantenimiento := sum {p in PRODUCTOS} (sum {e in EtapasBinarias}(sum {h in HORAS} Ocupado[p,e,h]) * MantBinarias[p,e] + sum {e in EtapasVariables}(sum {h in HORAS} Ratio[p,e,h]) * EtapasVariables[p,e]);
@@ -54,4 +60,15 @@ param CosteInicio := sum{e in EtapasCoste, h in HORAS} Encendido[e,h]*CosteInici
 
 maximize GanarDinero: Ingresos - Mantenimiento - CosteInicio;
 
-subject to 
+subject to Cota_materia: sum{p in PRODUCTOS} Cantidad[p,first(Orden[p]),1]*FactorConversion[p] <= CantAlcach;
+subject to Final_es_inicial {p in PRODUCTOS}: Cantidad[p,first(Orden[p]),1] = Cantidad[p,last(OrdenCompleto[p]),H];
+subject to Inicializacion {p in PRODUCTOS, e in (OrdenCompleto[p] diff first(Orden[p]))}:  Cantidad[p,e,1] = 0;
+subject to Produccion_crear {p in PRODUCTOS, e in (Orden[p] diff first(Orden[p])), h in (HORAS diff {1})}: Cantidad[p,e,h] = Cantidad[p,e,h-1] - Ratio[p,e,h-1] + Ratio[p,prev(e),h-1];
+subject to Produccion_crear_fianl {p in PRODUCTOS, h in (HORAS diff {1}}: Cantidad[p,last(ETAPASCOMPLETO),h] = Cantidad[p,last(ETAPASCOMPLETO),h-1] + Ratio[p,last(Orden[p]),h-1];
+subject to Produccion_crear_inicial {p in PRODUCTOS, h in (HORAS diff {1}}: Cantidad[p,first(Orden[p]),h] = Cantidad[p,first(Orden[p]),h-1] - Ratio[p,first(Orden[p]),h-1];
+subject to Producir_Posible {p in PRODUCTOS, e in Orden[p], h in HORAS}: Ratio[p,e,h] <= Cantidad[p,e,h];
+subject to Unicidad_producto {e in ETAPAS, h in HORAS}: sum{p in OrdenInvs[e]} Ocupado[p,e,h] <= 1;
+subject to Cota_ratio {p in PRODUCTOS, e in Orden[p], h in HORAS}: Ratio[p,e,h] <= Ocupado[p,e,h]*RatioMax[e,p];
+subject to Encender_si_produciendo_ini {e in EtapasCoste}: sum{p in OrdenInvs[e]} Ocupado[p,e,1] <= Encendido[e,1];
+subject to Encender_si_produciendo {e in EtapasCoste, h in (HORAS diff {1}}: sum{p in OrdenInvs[e]} Ocupado[p,e,h] - Ocupado[p,e,h-1] <= Encendido[e,h];
+subject to Rest_venta {p in PRODUCTOS} sum{c in CLIENTES} Vender[p,c] = Cantidad[p,last(ETAPASCOMPLETO),H];
