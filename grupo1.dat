@@ -1,0 +1,56 @@
+# Archivo de datos y parámetros del problema de las alcachofas
+param H := hmax;
+
+set PRODUCTOS := 1..pmax;
+set CLIENTES := 1..cmax;
+
+param CantAlcach := numerín; 
+
+param RatioMax := 1..emax efin # Ratio máximo de producción que puede tener del producto p la etapa e
+1
+.
+.
+pmax;
+
+param DemandaMin := 1..cmax # Demanda mínima que tiene cada cliente
+1
+.
+.
+pmax;
+
+param DemandaMax := 1..cmax
+1
+.
+.
+pmax;
+
+param Precio := 1..cmax
+1
+.
+.
+pmax;
+
+param TipoEtapas := numerines; # Un 1 significa etapa fija, un 2 binaria y un 3 variable
+
+param MantFijas := numerines;
+
+param MantBinarias := (EtapasBinarias)
+1
+.
+.
+pmax;
+
+param MantVariables := (EtapasVariables)
+1
+.
+.
+pmax;
+
+param CosteInicio := numerines;
+
+param Receta := 1..emax efin # Etapas que va a tener que pasar cada tipo de producto hasta que esté completo
+1
+.
+.
+pmax;
+
