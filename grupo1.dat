@@ -1,7 +1,7 @@
 # Archivo de datos y parámetros del problema de las alcachofas
 param H := hmax;
 
-set PRODUCTOS := 1..pmax;
+set PRODUCTOS := P1;
 set CLIENTES := 1..cmax;
 
 param CantAlcach := numerín; 
