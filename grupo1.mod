@@ -9,7 +9,7 @@ set ETAPASCOMPLETO ordered:= ETAPAS union {card(ETAPAS) + 1};
 
 param CantAlcach integer > 0; #Numero de cantidad de alcachofas
 param RatioMax {PRODUCTOS,ETAPAS} >= 0; #Ratio maximo de cada etapa por cada producto
-param DemandaMin {PRODUCTOS,CLIENTES} >= 0; #Demanda mínima que solicita cada cliente de el producto
+param DemandaMin {PRODUCTOS,CLIENTES} >= 0; #Demanda minima que solicita cada cliente de el producto
 param DemandaMax {PRODUCTOS,CLIENTES} >=0; #Demanda maxima que solicita cada cliente de el producto
 param Precio {PRODUCTOS,CLIENTES} >= 0; #Precio al que me compra el cliente cada producto
 
@@ -40,17 +40,24 @@ set OrdenCompleto {p in PRODUCTOS}  ordered:= Orden[p] union {last(ETAPASCOMPLET
 #Orden inverso
 set OrdenInvs {e in ETAPAS} within PRODUCTOS := {p in PRODUCTOS: e in Orden[p]};
 
-param SubProdNecesario{PRODUCTOS,ETAPAS} >=0; #Calculamos los factores de conversión para la cantidad y los ratios a partir de la cantidad de subproducto
+#Calculamos los factores de conversion para la cantidad y los ratios a partir de la cantidad de subproducto
+param SubProdNecesario{PRODUCTOS,ETAPAS} >=0; 
+
+#Factor de conversion de productos a alcachofas
 param FactorConversion_ratio {p in PRODUCTOS,e in Orden[p]} := prod{f in Orden[p]: ord(e) <= ord(f)} SubProdNecesario[p,f];
-param FactorConversion {p in PRODUCTOS} := FactorConversion_ratio[p,first(Orden[p])]; #Factor de conversion de productos a alcachofas
+param FactorConversion {p in PRODUCTOS} := FactorConversion_ratio[p,first(Orden[p])]; 
 
 
-
-var Cantidad {p in PRODUCTOS, OrdenCompleto[p], HORAS} integer >= 0, <= CantAlcach/FactorConversion[p]; #Cantidad de producto que esta esperando en cierta etapa a una hora dada
-var Ratio {p in PRODUCTOS,e in Orden[p],HORAS}integer >=0, <=RatioMax[p,e]; #Cantidad de producto que procesa una etapa en una hora dada
-var Ocupado {p in PRODUCTOS,Orden[p],HORAS} binary; #1 si el producto dado esta en la etapa dada en la hora dada
-var Encendido {EtapasCoste,HORAS} binary; #1 si la etapa dada esta produciendo en la hora dada
-var Vender {p in PRODUCTOS,c in CLIENTES} integer >=DemandaMin[p,c], <=DemandaMax[p,c]; #Cantidad de producto vendido a un cliente
+var Cantidad {p in PRODUCTOS, OrdenCompleto[p], HORAS} integer >= 0, <= CantAlcach/FactorConversion[p]; 
+#Cantidad de producto que esta esperando en cierta etapa a una hora dada
+var Ratio {p in PRODUCTOS,e in Orden[p],HORAS}integer >=0, <=RatioMax[p,e]; 
+#Cantidad de producto que procesa una etapa en una hora dada
+var Ocupado {p in PRODUCTOS,Orden[p],HORAS} binary; 
+#1 si el producto dado esta en la etapa dada en la hora dada
+var Encendido {EtapasCoste,HORAS} binary; 
+#1 si la etapa dada esta produciendo en la hora dada
+var Vender {p in PRODUCTOS,c in CLIENTES} integer >=DemandaMin[p,c], <=DemandaMax[p,c]; 
+#Cantidad de producto vendido a un cliente
 
 maximize GanarDinero: 
     sum{p in PRODUCTOS, c in CLIENTES} Vender[p,c]*Precio[p,c] 

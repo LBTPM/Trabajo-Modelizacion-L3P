@@ -1,4 +1,4 @@
-# Archivo de datos y parámetros del problema de las alcachofas
+# Archivo de datos y parametros del problema de las alcachofas
 param H := 50;
 
 set PRODUCTOS := P1, P2, P3, P4;
