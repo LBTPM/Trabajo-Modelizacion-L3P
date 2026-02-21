@@ -3,4 +3,19 @@ model "grupo1.mod";
 data "grupo1.dat";
 option solver gurobi;
 solve;
-display Vender;
+
+display Cantidad;
+display Ratio;
+display Ocupado;
+display Encendido;
+
+
+printf "\n=========================================\n";
+printf "        CANTIDADES VENDIDAS\n";
+printf "=========================================\n\n";
+
+for {p in PRODUCTOS} {
+    printf "\nProducto: %s\n", p;
+    printf "-----------------------------------------\n";
+    display {c in CLIENTES} Vender[p,c];
+}
