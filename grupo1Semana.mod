@@ -44,6 +44,10 @@ set OrdenCompleto {p in PRODUCTOS}  ordered:= Orden[p] union {last(ETAPASCOMPLET
 set OrdenInvs {e in ETAPAS} within PRODUCTOS := {p in PRODUCTOS: e in Orden[p]};
 #Orden inverso
 
+param SubProdNecesario{PRODUCTOS,ETAPAS} >=0; #Calculamos los factores de conversión para la cantidad y los ratios a partir de la cantidad de subproducto
+param FactorConversion_ratio {p in PRODUCTOS,e in Orden[p]} := prod{f in Orden[p]: ord(e) <= ord(f)} SubProdNecesario[p,f];
+param FactorConversion {p in PRODUCTOS} := FactorConversion_ratio[p,first(Orden[p])]; #Factor de conversion de productos a alcachofas
+
 /*******************************************************************************************************/
 
 var Cantidad {p in PRODUCTOS, OrdenCompleto[p], HORAS, g in DIAS} integer >= 0, <= CantAlcach[g]/FactorConversion[p]; 

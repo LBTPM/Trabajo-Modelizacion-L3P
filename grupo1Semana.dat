@@ -1,5 +1,5 @@
 # Archivo de datos y parámetros del problema de las alcachofas
-param H := 32;
+param H := 16;
 
 set PRODUCTOS := P1, P2, P3, P4;
 set CLIENTES := C1, C2, C3, C4, C5;
@@ -72,11 +72,12 @@ E4 0
 E5 4 
 E6 0;
 
-param FactorConversion:=
-P1      10
-P2      20  
-P3      50
-P4      15              ;
+param SubProdNecesario: #Cantidad de subproducto de la etapa anterior que necesita la etapa para producir 1 de su subproducto
+        E1 E2 E3 E4 E5 E6 :=
+P1      1  2  5  0  1  0
+P2      1  5  0  4  1  0
+P3      2  0  5  1  0  5
+P4      1  1  0  5  0  3 ;
 
 param Receta:
         E1 E2 E3 E4 E5 E6 :=

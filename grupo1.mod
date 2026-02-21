@@ -6,12 +6,13 @@ set CLIENTES;
 set ETAPAS ordered;
 set ETAPASCOMPLETO ordered:= ETAPAS union {card(ETAPAS) + 1};
 
+
 param CantAlcach integer > 0; #Numero de cantidad de alcachofas
 param RatioMax {PRODUCTOS,ETAPAS} >= 0; #Ratio maximo de cada etapa por cada producto
 param DemandaMin {PRODUCTOS,CLIENTES} >= 0; #Demanda mínima que solicita cada cliente de el producto
 param DemandaMax {PRODUCTOS,CLIENTES} >=0; #Demanda maxima que solicita cada cliente de el producto
 param Precio {PRODUCTOS,CLIENTES} >= 0; #Precio al que me compra el cliente cada producto
-param FactorConversion {PRODUCTOS} >= 0; #Factor de conversion de productos a alcachofas
+
 
 param TipoEtapas {ETAPAS}; #Parametro que dice el tipo de las etapas
 
@@ -38,6 +39,12 @@ set OrdenCompleto {p in PRODUCTOS}  ordered:= Orden[p] union {last(ETAPASCOMPLET
 
 #Orden inverso
 set OrdenInvs {e in ETAPAS} within PRODUCTOS := {p in PRODUCTOS: e in Orden[p]};
+
+param SubProdNecesario{PRODUCTOS,ETAPAS} >=0; #Calculamos los factores de conversión para la cantidad y los ratios a partir de la cantidad de subproducto
+param FactorConversion_ratio {p in PRODUCTOS,e in Orden[p]} := prod{f in Orden[p]: ord(e) <= ord(f)} SubProdNecesario[p,f];
+param FactorConversion {p in PRODUCTOS} := FactorConversion_ratio[p,first(Orden[p])]; #Factor de conversion de productos a alcachofas
+
+
 
 var Cantidad {p in PRODUCTOS, OrdenCompleto[p], HORAS} integer >= 0, <= CantAlcach/FactorConversion[p]; #Cantidad de producto que esta esperando en cierta etapa a una hora dada
 var Ratio {p in PRODUCTOS,e in Orden[p],HORAS}integer >=0, <=RatioMax[p,e]; #Cantidad de producto que procesa una etapa en una hora dada

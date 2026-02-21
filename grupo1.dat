@@ -27,33 +27,33 @@ P2      50   60   50   40   50
 P3      40   50   60   50   40
 P4      50   40   50   60   50  ;     
 
-param Precio:
+param Precio: #Precio de venta
         C1  C2  C3  C4  C5 :=
-P1      10  11  9   12  10
+P1      10  11  9   5  10
 P2      9   10  11  9   12
 P3      11  9   10  12  10
 P4      10  12  9   11  10 ;         
 
-param TipoEtapas :=
+param TipoEtapas := # Un 1 significa etapa fija, un 2 binaria y un 3 variable
 E1 1 
 E2 1 
 E3 2 
 E4 3 
 E5 2 
-E6 3 ; # Un 1 significa etapa fija, un 2 binaria y un 3 variable
+E6 3 ; 
 
-param MantFijas := 
+param MantFijas :=  # Gasto Mantenimiento Fijas
 E1 10
 E2 2;
                            
-param MantBinarias:
+param MantBinarias: # Gasto Mantenimiento Binarias
         E3  E5 :=
 P1      3   2
 P2      2   3
 P3      3   2
 P4      2   3 ;   
 
-param MantVariables:
+param MantVariables: # Gasto Mantenimiento Variables
         E4  E6 :=
 P1      2   1
 P2      1   2
@@ -68,11 +68,12 @@ E4 0
 E5 4 
 E6 0;
 
-param FactorConversion:=
-P1      10
-P2      20  
-P3      50
-P4      15              ;
+param SubProdNecesario: #Cantidad de subproducto de la etapa anterior que necesita la etapa para producir 1 de su subproducto
+        E1 E2 E3 E4 E5 E6 :=
+P1      1  2  5  0  1  0
+P2      1  5  0  4  1  0
+P3      2  0  5  1  0  5
+P4      1  1  0  5  0  3 ;
 
 param Receta:
         E1 E2 E3 E4 E5 E6 :=

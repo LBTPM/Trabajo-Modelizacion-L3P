@@ -19,3 +19,17 @@ for {p in PRODUCTOS} {
     printf "-----------------------------------------\n";
     display {c in CLIENTES} Vender[p,c];
 }
+
+for {p in PRODUCTOS, e in Orden[p], h in HORAS} {
+    if Ratio[p,e,h] > 0 then{
+        printf(p);
+        printf(" ");
+        printf(e);
+        printf(" ");
+        printf(h);
+        printf("\n");
+        printf "\nRatio Normalizado: %.2f\n", Ratio[p,e,h];
+        printf "\nRatio Real: %.2f\n", Ratio[p,e,h]*FactorConversion_ratio[p,e];
+        printf "-----------------------------------------\n";
+    }
+}
