@@ -1,2 +1,5 @@
 reset;
 model "grupo1.mod";
+data "grupo1.dat";
+option solver gurobi;
+solve;

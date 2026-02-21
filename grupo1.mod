@@ -45,7 +45,7 @@ set OrdenInvs {e in ETAPAS} within PRODUCTOS := {p in PRODUCTOS: e in Orden[p]};
 
 var Cantidad {p in PRODUCTOS, OrdenCompleto[p], HORAS} integer >= 0, <= CantAlcach/FactorConversion[p]; 
 #Cantidad de producto que esta esperando en cierta etapa a una hora dada
-var Ratio {p in PRODUCTOS,e in OrdenCompleto[p],HORAS}integer >=0, <=RatioMax[p,e];
+var Ratio {p in PRODUCTOS,e in Orden[p],HORAS}integer >=0, <=RatioMax[p,e];
 #Cantidad de producto que procesa una etapa en una hora dada
 var Ocupado {p in PRODUCTOS,Orden[p],HORAS} binary;
 #1 si el producto dado esta en la etapa dada en la hora dada
@@ -54,17 +54,25 @@ var Encendido {EtapasCoste,HORAS} binary;
 var Vender {p in PRODUCTOS,c in CLIENTES} integer >=DemandaMin[p,c], <=DemandaMax[p,c];
 #Cantidad de producto vendido a un cliente
 
-maximize GanarDinero: sum{p in PRODUCTOS, c in CLIENTES} Vender[p,c]*Precio[p,c] - sum {p in PRODUCTOS} (sum {e in EtapasBinarias}(sum {h in HORAS} Ocupado[p,e,h]) * MantBinarias[p,e] - sum {e in EtapasVariables}(sum {h in HORAS} Ratio[p,e,h]) * MantVariables[p,e]) - sum{e in EtapasCoste, h in HORAS} Encendido[e,h]*CosteInicial[e];
+maximize GanarDinero: sum{p in PRODUCTOS, c in CLIENTES} Vender[p,c]*Precio[p,c] - sum{e in EtapasFijas} MantFijas[e]*H - sum {p in PRODUCTOS} (sum {e in (EtapasBinarias inter Orden[p] )}(sum {h in HORAS} Ocupado[p,e,h]) * MantBinarias[p,e] - sum {e in (EtapasVariables inter Orden[p])}(sum {h in HORAS} Ratio[p,e,h]) * MantVariables[p,e]) - sum{e in EtapasCoste, h in HORAS} Encendido[e,h]*CosteInicial[e];
 
 subject to Cota_materia: sum{p in PRODUCTOS} Cantidad[p,first(Orden[p]),1]*FactorConversion[p] <= CantAlcach;
+
 subject to Final_es_inicial {p in PRODUCTOS}: Cantidad[p,first(Orden[p]),1] = Cantidad[p,last(OrdenCompleto[p]),H];
+
 subject to Inicializacion {p in PRODUCTOS, e in (OrdenCompleto[p] diff {first(Orden[p])})}:  Cantidad[p,e,1] = 0;
-subject to Produccion_crear {p in PRODUCTOS, e in (Orden[p] diff {first(Orden[p])}), h in (HORAS diff {1})}: Cantidad[p,e,h] = Cantidad[p,e,h-1] - Ratio[p,e,h-1] + Ratio[p,prev(e),h-1];
-subject to Produccion_crear_fianl {p in PRODUCTOS, h in (HORAS diff {1})}: Cantidad[p,last(ETAPASCOMPLETO),h] = Cantidad[p,last(ETAPASCOMPLETO),h-1] + Ratio[p,last(Orden[p]),h-1];
+
+subject to Produccion_crear {p in PRODUCTOS, e in (Orden[p] diff {first(Orden[p])}), h in (HORAS diff {1})}: Cantidad[p,e,h] = Cantidad[p,e,h-1] - Ratio[p,e,h-1] + Ratio[p,prev(e, Orden[p]),h-1];
+subject to Produccion_crear_final {p in PRODUCTOS, h in (HORAS diff {1})}: Cantidad[p,last(ETAPASCOMPLETO),h] = Cantidad[p,last(ETAPASCOMPLETO),h-1] + Ratio[p,last(Orden[p]),h-1];
 subject to Produccion_crear_inicial {p in PRODUCTOS, h in (HORAS diff {1})}: Cantidad[p,first(Orden[p]),h] = Cantidad[p,first(Orden[p]),h-1] - Ratio[p,first(Orden[p]),h-1];
+
 subject to Producir_Posible {p in PRODUCTOS, e in Orden[p], h in HORAS}: Ratio[p,e,h] <= Cantidad[p,e,h];
+
 subject to Unicidad_producto {e in ETAPAS, h in HORAS}: sum{p in OrdenInvs[e]} Ocupado[p,e,h] <= 1;
-subject to Cota_ratio {p in PRODUCTOS, e in Orden[p], h in HORAS}: Ratio[p,e,h] <= Ocupado[p,e,h]*RatioMax[e,p];
+
+subject to Cota_ratio {p in PRODUCTOS, e in Orden[p], h in HORAS}: Ratio[p,e,h] <= Ocupado[p,e,h]*RatioMax[p,e];
+
 subject to Encender_si_produciendo_ini {e in EtapasCoste}: sum{p in OrdenInvs[e]} Ocupado[p,e,1] <= Encendido[e,1];
 subject to Encender_si_produciendo {e in EtapasCoste, h in (HORAS diff {1})}: sum{p in OrdenInvs[e]} (Ocupado[p,e,h] - Ocupado[p,e,h-1]) <= Encendido[e,h];
+
 subject to Rest_venta {p in PRODUCTOS}: sum{c in CLIENTES} Vender[p,c] = Cantidad[p,last(ETAPASCOMPLETO),H];
