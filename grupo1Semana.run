@@ -1,0 +1,44 @@
+reset;
+model "grupo1Semana.mod";
+data "grupo1Semana.dat";
+
+option solver gurobi;
+solve;
+
+print("Crearemos las siguientes cantidades de producto para cada tipo distinto de ellos:");
+for {p in PRODUCTOS} {
+    printf("Producto ");
+    printf(p);
+
+    for {g in DIAS} {
+    printf(" dia ");
+    printf(g);
+    printf(": ");
+    printf(Cantidad[p,last(OrdenCompleto[p]),H,g]);
+    printf(" | ");
+    }
+
+    printf("\n");
+
+}
+
+printf("\n");
+print("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_");
+printf("\n");
+
+print("Le venderemos a los clientes las siguientes cantidades:");
+for {p in PRODUCTOS} {
+    printf("Producto ");
+    printf(p);
+    
+    for {c in CLIENTES} {
+        printf(" cliente ");
+        printf(c);
+        printf(": ");
+        printf(Vender[p,c]);
+        printf(" | ");
+    }
+
+    printf("\n");
+
+}
