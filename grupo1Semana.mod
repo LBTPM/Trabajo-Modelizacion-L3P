@@ -16,8 +16,6 @@ param DemandaMax {PRODUCTOS,CLIENTES} >=0;
 #Demanda maxima que solicita cada cliente de el producto
 param Precio {PRODUCTOS,CLIENTES} >= 0;
 #Precio al que me compra el cliente cada producto
-param FactorConversion {PRODUCTOS} >= 0;
-#Factor de conversion de productos a alcachofas
 
 param TipoEtapas {ETAPAS}; #Parametro que dice el tipo de las etapas
 
