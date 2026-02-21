@@ -1,0 +1,91 @@
+# Archivo de datos y parámetros del problema de las alcachofas
+param H := 32;
+
+set PRODUCTOS := P1, P2, P3, P4;
+set CLIENTES := C1, C2, C3, C4, C5;
+set ETAPAS:= E1, E2, E3, E4, E5, E6;
+set DIAS := D1 D2 D3 D4 D5 D6 D7;
+param CantAlcach := 
+D1 1500
+D2 1700
+D3 2400
+D4 1500
+D5 1000
+D6 2050
+D7 5500; 
+
+param RatioMax:
+        E1   E2   E3   E4   E5   E6 :=
+P1      15   13   10   10   15   13
+P2      15   12   10   13   11   12
+P3      13   13   12   12   11   16
+P4      10   13   11   12   20   12 ;
+
+param DemandaMin:
+        C1  C2  C3  C4  C5 :=
+P1      2   1   0   1   0
+P2      1   2   1   0   1
+P3      0   1   2   1   0
+P4      1   0   1   2   1 ;
+
+param DemandaMax:
+        C1  C2  C3  C4  C5 :=
+P1      6   5   4   5   4
+P2      5   6   5   4   5
+P3      4   5   6   5   4
+P4      5   4   5   6   5 ;           
+
+param Precio:
+        C1  C2  C3  C4  C5 :=
+P1      10  11  9   12  10
+P2      9   10  11  9   12
+P3      11  9   10  12  10
+P4      10  12  9   11  10 ;         
+
+param TipoEtapas :=
+E1 1 
+E2 1 
+E3 2 
+E4 3 
+E5 2 
+E6 3 ; # Un 1 significa etapa fija, un 2 binaria y un 3 variable
+
+param MantFijas := 
+E1 10
+E2 2;
+                           
+param MantBinarias:
+        E3  E5 :=
+P1      3   2
+P2      2   3
+P3      3   2
+P4      2   3 ;   
+
+param MantVariables:
+        E4  E6 :=
+P1      2   1
+P2      1   2
+P3      2   1
+P4      1   2 ;      
+
+
+param CosteInicial := 
+E1 2 
+E2 8 
+E3 0 
+E4 0 
+E5 4 
+E6 0;
+
+param FactorConversion:=
+P1      10
+P2      20  
+P3      50
+P4      15              ;
+
+param Receta:
+        E1 E2 E3 E4 E5 E6 :=
+P1      1  1  1  0  1  0
+P2      1  1  0  1  1  0
+P3      1  0  1  1  0  1
+P4      1  1  0  1  0  1 ;
