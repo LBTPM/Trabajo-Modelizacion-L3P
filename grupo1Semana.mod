@@ -67,9 +67,9 @@ var Vender {p in PRODUCTOS,c in CLIENTES} integer >= DemandaMin[p,c], <=DemandaM
 
 maximize GanarDinero: 
     (sum{p in PRODUCTOS, c in CLIENTES} (Vender[p,c]*Precio[p,c])) 
-    - (sum{e in EtapasFijas, g in DIAS} (CosteInicial[e]*card(HORAS)))
+    - (sum{e in EtapasFijas, g in DIAS} (MantFijas[e]*card(HORAS)))
     - (sum {p in PRODUCTOS, g in DIAS} ((sum {e in (EtapasBinarias inter Orden[p])}(sum {h in HORAS} Ocupado[p,e,h,g]) * MantBinarias[p,e]) 
-    - (sum {e in (EtapasVariables inter Orden[p])}(sum {h in HORAS} Ratio[p,e,h,g]) * MantVariables[p,e]))) 
+    + (sum {e in (EtapasVariables inter Orden[p])}(sum {h in HORAS} Ratio[p,e,h,g]) * MantVariables[p,e]))) 
     - (sum{e in EtapasCoste, h in HORAS, g in DIAS} Encendido[e,h,g]*CosteInicial[e]);
 # Esta es nuestra funcion objetivo
 
