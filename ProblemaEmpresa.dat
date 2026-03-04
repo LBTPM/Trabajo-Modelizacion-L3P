@@ -45,7 +45,7 @@ B6_sin    950 550 0   1000 600 910  0    1000 1400
 B30_con   950 550 0   1000 500 850  1900 1000 1200
 B30_sin   950 550 0   1000 500 850  0    1000 1200
 T_con     950 550 650 0    900 1400 2000 1000 1700
-T_sin     950 500 650 0    900 1400 0    1000 1700;
+T_sin     950 550 650 0    900 1400 0    1000 1700;
 
 # =====================================================
 # DEMANDA MINIMA
@@ -315,8 +315,7 @@ T_sin     1 1 1 0 4 1 0 1 5;
 # =====================================================
 
 param Receta:
-        PeladoMaquina PeladoMano Cortado Confitadora
-        Bandejas Congelacion Aceite Termosellado Cajas :=
+        PeladoMaquina PeladoMano Cortado Confitadora Bandejas Congelacion Aceite Termosellado Cajas :=
 
 B15_con   1 1 0 1 1 1 1 1 1
 B15_sin   1 1 0 1 1 1 0 1 1
