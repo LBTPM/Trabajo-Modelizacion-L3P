@@ -1,6 +1,6 @@
 reset;
 model "grupo1Semana.mod";
-data "grupo1Semana.dat";
+data "ProblemaEmpresa.dat";
 
 option solver gurobi;
 solve;
@@ -75,4 +75,3 @@ for {p in PRODUCTOS, g in DIAS} {
     print("");
 
 }
-

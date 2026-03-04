@@ -8,7 +8,7 @@ set ETAPAS ordered;
 set ETAPASCOMPLETO ordered:= ETAPAS union {card(ETAPAS) + 1};
 
 param CantAlcach {DIAS} integer > 0; #Numero de cantidad de alcachofas
-param RatioMax {PRODUCTOS,ETAPAS} >= 0; 
+param RatioRealMax {PRODUCTOS,ETAPAS} >= 0; 
 #Ratio maximo de cada etapa por cada producto
 param DemandaMin {PRODUCTOS,CLIENTES} >= 0; 
 #Demanda minima que solicita cada cliente de el producto
@@ -42,9 +42,11 @@ set OrdenCompleto {p in PRODUCTOS}  ordered:= Orden[p] union {last(ETAPASCOMPLET
 set OrdenInvs {e in ETAPAS} within PRODUCTOS := {p in PRODUCTOS: e in Orden[p]};
 #Orden inverso
 
-param SubProdNecesario{PRODUCTOS,ETAPAS} >=0; #Calculamos los factores de conversion para la cantidad y los ratios a partir de la cantidad de subproducto
+param SubProdNecesario{PRODUCTOS,ETAPAS} >=0; #Para calcular los factores de conversion para la cantidad y los ratios a partir de la cantidad de subproducto
 param FactorConversion_ratio {p in PRODUCTOS,e in Orden[p]} := prod{f in Orden[p]: ord(e) <= ord(f)} SubProdNecesario[p,f];
 param FactorConversion {p in PRODUCTOS} := FactorConversion_ratio[p,first(Orden[p])]; #Factor de conversion de productos a alcachofas
+
+param RatioMax {p in PRODUCTOS,e in Orden[p]} := RatioRealMax[p,e] / FactorConversion_ratio[p,e];  #Calculando Ratio Maximo normalizado a partir del real
 
 /*********************/
 
