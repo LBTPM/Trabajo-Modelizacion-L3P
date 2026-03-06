@@ -1,0 +1,70 @@
+# --- Parámetros Globales ---
+param H := 8; 
+
+# --- Conjuntos ---
+set PRODUCTOS := Alcachofa_Bote Alcachofa_Congelada;
+
+set CLIENTES := 
+    C1 C2 C3 C4 C5 C6 C7 C8 C9 C10 C11 C12 C13 C14 C15;
+
+set DIAS := 
+    Lunes Martes Miercoles Jueves Viernes Sabado Domingo;
+
+set ETAPAS := Lavado Corte Coccion Envasado;
+
+# --- Tipos de Etapas (1:Fija, 2:Binaria, 3:Variable) ---
+param TipoEtapas :=
+Lavado   1
+Corte    2
+Coccion  3
+Envasado 1;
+
+# --- Costes y Mantenimiento ---
+param CosteInicial := Lavado 10, Corte 5, Coccion 20, Envasado 15;
+param MantFijas := Lavado 2, Envasado 3;
+
+param MantBinarias :=
+Alcachofa_Bote      Corte 4
+Alcachofa_Congelada Corte 2;
+
+param MantVariables :=
+Alcachofa_Bote      Coccion 0.5
+Alcachofa_Congelada Coccion 0.8;
+
+# --- Materia Prima por Día (Fluctuación semanal) ---
+param CantAlcach :=
+Lunes 500  Martes 450  Miercoles 500  Jueves 480 
+Viernes 550 Sabado 300 Domingo 200;
+
+# --- Receta y Producción ---
+param Receta : Lavado Corte Coccion Envasado :=
+Alcachofa_Bote      1 1 1 1
+Alcachofa_Congelada 1 1 0 1;
+
+param RatioRealMax : Lavado Corte Coccion Envasado :=
+Alcachofa_Bote      100 80 60 50
+Alcachofa_Congelada 120 90 70 60;
+
+param SubProdNecesario : Lavado Corte Coccion Envasado :=
+Alcachofa_Bote      1.1 1.0 1.2 1.0
+Alcachofa_Congelada 1.0 1.1 1.0 1.0;
+
+# --- Mercado (15 Clientes) ---
+# Precios diferenciados para forzar al modelo a elegir a quién vender
+param Precio :
+    C1 C2 C3 C4 C5 C6 C7 C8 C9 C10 C11 C12 C13 C14 C15 :=
+Alcachofa_Bote 
+    15 16 14 15 17 14 15 16 15 14 18 15 14 16 15
+Alcachofa_Congelada 
+    12 11 13 12 12 14 11 12 13 12 10 13 12 11 12;
+
+# Demanda Mínima (Muchos en 0 para dar libertad al modelo)
+param DemandaMin default 0;
+
+# Demanda Máxima (Capacidad de compra de los clientes)
+param DemandaMax :
+    C1 C2 C3 C4 C5 C6 C7 C8 C9 C10 C11 C12 C13 C14 C15 :=
+Alcachofa_Bote 
+    40 30 50 20 25 60 35 40 30 45 20 50 35 40 45
+Alcachofa_Congelada 
+    60 50 70 40 45 80 55 60 50 65 40 70 55 60 65;
