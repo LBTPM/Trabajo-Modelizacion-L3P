@@ -20,7 +20,7 @@ for {p in PRODUCTOS} {
 
     for {g in DIAS} {
     printf(" dia ");
-    printf(" dia ") >> SalidaDatostxt;
+    printf(" dia ") >> SalidaDatos.txt;
     printf(g);
     printf(g) >> SalidaDatos.txt;
     printf(": ");
