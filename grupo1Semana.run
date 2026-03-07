@@ -2,9 +2,10 @@ reset;
 model "grupo1Semana.mod";
 data "ProblemaEmpresa.dat";
 
+option presolve 1;
 option solver gurobi;
-option gurobi_options 'presolve=2 outlev=1';
 solve;
+
 
 print("Crearemos las siguientes cantidades de producto para cada tipo distinto de ellos:");
 for {p in PRODUCTOS} {

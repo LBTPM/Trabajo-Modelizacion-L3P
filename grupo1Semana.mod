@@ -46,14 +46,15 @@ param SubProdNecesario{PRODUCTOS,ETAPAS} >=0; #Para calcular los factores de con
 param FactorConversion_ratio {p in PRODUCTOS,e in Orden[p]} := prod{f in Orden[p]: ord(e) <= ord(f)} SubProdNecesario[p,f];
 param FactorConversion {p in PRODUCTOS} := FactorConversion_ratio[p,first(Orden[p])]; #Factor de conversion de productos a alcachofas
 
+
 param RatioMax {p in PRODUCTOS,e in Orden[p]} := RatioRealMax[p,e] / FactorConversion_ratio[p,e];  #Calculando Ratio Maximo normalizado a partir del real
 
 /*********************/
 
-var Cantidad {p in PRODUCTOS, OrdenCompleto[p], HORAS, g in DIAS} integer >= 0, <= CantAlcach[g]/FactorConversion[p]; 
+var Cantidad {p in PRODUCTOS, OrdenCompleto[p], HORAS, g in DIAS}>= 0, <= CantAlcach[g]/FactorConversion[p]; 
 #Cantidad de producto que esta esperando en cierta etapa a una hora dada un dia determinado
 
-var Ratio {p in PRODUCTOS,e in Orden[p],HORAS, DIAS}integer >=0, <=RatioMax[p,e];
+var Ratio {p in PRODUCTOS,e in Orden[p],HORAS, DIAS}>=0, <=RatioMax[p,e];
 #Cantidad de producto que procesa una etapa en una hora dada un dia determinado
 
 var Ocupado {p in PRODUCTOS,Orden[p],HORAS, DIAS} binary;
@@ -62,7 +63,7 @@ var Ocupado {p in PRODUCTOS,Orden[p],HORAS, DIAS} binary;
 var Encendido {EtapasCoste,HORAS, DIAS} binary;
 #1 si la etapa dada esta encendida en la hora dada el dia indicado
 
-var Vender {p in PRODUCTOS,c in CLIENTES} integer >= DemandaMin[p,c], <=DemandaMax[p,c];
+var Vender {p in PRODUCTOS,c in CLIENTES}>= DemandaMin[p,c], <=DemandaMax[p,c];
 #Cantidad de producto vendido a un cliente
 
 /*******************/
@@ -82,7 +83,7 @@ subject to Cota_materia {g in DIAS}:
 # Cantidad maxima de producto que se puede usar al dia
 
 subject to Final_es_inicial {p in PRODUCTOS, g in DIAS}:
-    Cantidad[p,first(Orden[p]),1,g] = Cantidad[p,last(OrdenCompleto[p]),H,g];
+    Cantidad[p,first(Orden[p]),1,g] = Cantidad[p,last(ETAPASCOMPLETO),H,g];
 # La cantidad de alcachofa producir ha de ser la misma cantidad para productos
 
 subject to Inicializacion {p in PRODUCTOS, e in (OrdenCompleto[p] diff {first(Orden[p])}), g in DIAS}:
@@ -124,5 +125,5 @@ subject to Encender_si_produciendo {e in EtapasCoste, h in (HORAS diff {1}), g i
 # Restriccion que cuenta si una etapa distinta de la primera acaba de empezar a producir
 
 subject to Rest_venta {p in PRODUCTOS}:
-    (sum{c in CLIENTES} Vender[p,c]) = (sum{g in DIAS} Cantidad[p,last(ETAPASCOMPLETO),H,g]);
+    (sum{c in CLIENTES} Vender[p,c]) <= (sum{g in DIAS} Cantidad[p,last(ETAPASCOMPLETO),H,g]);
 # Restriccion que vende todo el producto que se ha creado
