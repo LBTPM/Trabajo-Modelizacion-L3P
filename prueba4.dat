@@ -1,0 +1,99 @@
+# --- PARAMETROS GLOBALES ---
+param H := 24; 
+
+# --- CONJUNTOS ---
+set PRODUCTOS := 
+    B15_con B15_sin B24_con B24_sin B6_con B6_sin B30_con B30_sin T_con T_sin;
+
+set CLIENTES := 
+    C1 C2 C3 C4 C5 C6 C7 C8 C9 C10 C11 C12 C13 C14 C15;
+
+set DIAS := 
+    Lunes Martes Miercoles Jueves Viernes Sabado Domingo;
+
+set ETAPAS := 
+    PeladoMaquina PeladoMano Cortado Confitadora Bandejas Congelacion Aceite Termosellado Cajas;
+
+# --- CONFIGURACION DE ETAPAS ---
+param TipoEtapas :=
+PeladoMaquina 3
+PeladoMano    1
+Cortado       2
+Confitadora   2
+Bandejas      1
+Congelacion   3
+Aceite        2
+Termosellado  2
+Cajas         1;
+
+# --- COSTES DE ACTIVACION ---
+param CosteInicial := 
+PeladoMaquina 15 PeladoMano 5 Cortado 8 Confitadora 25 
+Bandejas 5 Congelacion 30 Aceite 12 Termosellado 10 Cajas 5;
+
+# --- MANTENIMIENTOS ---
+param MantFijas := PeladoMano 2.5 Bandejas 1.5 Cajas 2.0;
+
+param MantBinarias : Cortado Confitadora Aceite Termosellado :=
+B15_con   0   10   5   4
+B15_sin   0   10   0   4
+B24_con   0   10   5   4
+B24_sin   0   10   0   4
+B6_con    0   10   5   4
+B6_sin    0   10   0   4
+B30_con   0   10   5   4
+B30_sin   0   10   0   4
+T_con     4    0   5   5
+T_sin     4    0   0   5;
+
+param MantVariables : PeladoMaquina Congelacion :=
+B15_con   0.4   1.0
+B15_sin   0.4   1.0
+B24_con   0.5   1.1
+B24_sin   0.5   1.1
+B6_con    0.4   0.9
+B6_sin    0.4   0.9
+B30_con   0.6   1.2
+B30_sin   0.6   1.2
+T_con     0.5   1.0
+T_sin     0.5   1.0;
+
+# --- MATERIA PRIMA ---
+param CantAlcach := 
+Lunes 10000 Martes 9500 Miercoles 10000 Jueves 9800 Viernes 10500 Sabado 8000 Domingo 7000;
+
+# --- RECETA  ---
+param Receta:
+PeladoMaquina PeladoMano Cortado Confitadora Bandejas Congelacion Aceite Termosellado Cajas :=
+B15_con   1 1 0 1 1 1 1 1 1
+B15_sin   1 1 0 1 1 1 0 1 1
+B24_con   1 1 0 1 1 1 1 1 1
+B24_sin   1 1 0 1 1 1 0 1 1
+B6_con    1 1 0 1 1 1 1 1 1
+B6_sin    1 1 0 1 1 1 0 1 1
+B30_con   1 1 0 1 1 1 1 1 1
+B30_sin   1 1 0 1 1 1 0 1 1
+T_con     1 1 1 0 1 1 1 1 1
+T_sin     1 1 1 0 1 1 0 1 1;
+
+# --- RATIOS MAXIMOS ---
+param RatioRealMax default 6000;
+
+# --- SUBPRODUCTO NECESARIO ACTUALIZADO ---
+param SubProdNecesario:
+PeladoMaquina PeladoMano Cortado Confitadora Bandejas Congelacion Aceite Termosellado Cajas :=
+B15_con   1 1 0 1 5 1 1 1 3
+B15_sin   1 1 0 1 5 1 0 1 3
+B24_con   1 1 0 1 6 1 1 1 4
+B24_sin   1 1 0 1 6 1 0 1 4
+B6_con    1 1 0 1 6 1 1 1 1
+B6_sin    1 1 0 1 6 1 0 1 1
+B30_con   1 1 0 1 6 1 1 1 5
+B30_sin   1 1 0 1 6 1 0 1 5
+T_con     1 1 1 0 4 1 1 1 5
+T_sin     1 1 1 0 4 1 0 1 5;
+
+# --- MERCADO ---
+param Precio default 15;
+param DemandaMin default 5;
+param DemandaMax default 50;
