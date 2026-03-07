@@ -1,93 +1,93 @@
 Crearemos las siguientes cantidades de producto para cada tipo distinto de ellos:
 Producto B15_con || 
-Lunes: 0
-Martes: 585
-Miercoles: 0
-Jueves: 0
-Viernes: 0
-Sabado: 0
-Domingo: 0
+ dia Lunes: 0
+ dia Martes: 585
+ dia Miercoles: 0
+ dia Jueves: 0
+ dia Viernes: 0
+ dia Sabado: 0
+ dia Domingo: 0
 
 Producto B15_sin || 
-Lunes: 0
-Martes: 0
-Miercoles: 0
-Jueves: 351.6666666666667
-Viernes: 92.33333333333333
-Sabado: 0
-Domingo: 0
+ dia Lunes: 334
+ dia Martes: 0
+ dia Miercoles: 0
+ dia Jueves: 0
+ dia Viernes: 110
+ dia Sabado: 0
+ dia Domingo: 0
 
 Producto B24_con || 
-Lunes: 450.5
-Martes: 0
-Miercoles: 0
-Jueves: 0
-Viernes: 0
-Sabado: 0
-Domingo: 0
+ dia Lunes: 0
+ dia Martes: 0
+ dia Miercoles: 0
+ dia Jueves: 177
+ dia Viernes: 0
+ dia Sabado: 0
+ dia Domingo: 230
 
 Producto B24_sin || 
-Lunes: 0
-Martes: 0
-Miercoles: 0
-Jueves: 0
-Viernes: 379.7916666666667
-Sabado: 0
-Domingo: 0
+ dia Lunes: 0
+ dia Martes: 0
+ dia Miercoles: 197
+ dia Jueves: 0
+ dia Viernes: 0
+ dia Sabado: 227
+ dia Domingo: 0
 
 Producto B6_con || 
-Lunes: 0
-Martes: 0
-Miercoles: 0
-Jueves: 0
-Viernes: 0
-Sabado: 0
-Domingo: 499
+ dia Lunes: 499
+ dia Martes: 0
+ dia Miercoles: 0
+ dia Jueves: 0
+ dia Viernes: 0
+ dia Sabado: 0
+ dia Domingo: 0
 
 Producto B6_sin || 
-Lunes: 0
-Martes: 0
-Miercoles: 0
-Jueves: 0
-Viernes: 0
-Sabado: 0
-Domingo: 559
+ dia Lunes: 0
+ dia Martes: 0
+ dia Miercoles: 507
+ dia Jueves: 52
+ dia Viernes: 0
+ dia Sabado: 0
+ dia Domingo: 0
 
 Producto B30_con || 
-Lunes: 0
-Martes: 0
-Miercoles: 373.3333333333333
-Jueves: 0
-Viernes: 0
-Sabado: 0
-Domingo: 0
+ dia Lunes: 143
+ dia Martes: 144
+ dia Miercoles: 0
+ dia Jueves: 0
+ dia Viernes: 0
+ dia Sabado: 85
+ dia Domingo: 0
 
 Producto B30_sin || 
-Lunes: 0
-Martes: 144.1666666666667
-Miercoles: 0
-Jueves: 150.8333333333333
-Viernes: 0
-Sabado: 0
-Domingo: 0
+ dia Lunes: 0
+ dia Martes: 0
+ dia Miercoles: 0
+ dia Jueves: 0
+ dia Viernes: 295
+ dia Sabado: 0
+ dia Domingo: 0
 
 Producto T_con || 
-Lunes: 0
-Martes: 0
-Miercoles: 0
-Jueves: 0
-Viernes: 0
-Sabado: 262
-Domingo: 0
+ dia Lunes: 0
+ dia Martes: 0
+ dia Miercoles: 0
+ dia Jueves: 262
+ dia Viernes: 0
+ dia Sabado: 0
+ dia Domingo: 0
 
 Producto T_sin || 
-Lunes: 74.4
-Martes: 0
-Miercoles: 0
-Jueves: 0
-Viernes: 0
-Sabado: 138
-Domingo: 32.6
+ dia Lunes: 0
+ dia Martes: 0
+ dia Miercoles: 171
+ dia Jueves: 0
+ dia Viernes: 0
+ dia Sabado: 0
+ dia Domingo: 74
 
 
 -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -129,14 +129,14 @@ Producto B15_sin ||
 
 Producto B24_con || 
  cliente C1: 101
- cliente C2: 118
+ cliente C2: 82
  cliente C3: 121
  cliente C4: 18
  cliente C5: 40
  cliente C6: 10
  cliente C7: 0
  cliente C8: 0
- cliente C9: 12.5
+ cliente C9: 5
  cliente C10: 0
  cliente C11: 20
  cliente C12: 5
@@ -145,19 +145,19 @@ Producto B24_con ||
  cliente C15: 5
 
 Producto B24_sin || 
- cliente C1: 84.79166666666669
+ cliente C1: 107
  cliente C2: 75
  cliente C3: 115
  cliente C4: 20
  cliente C5: 75
  cliente C6: 0
- cliente C7: 2
+ cliente C7: 15
  cliente C8: 3
  cliente C9: 0
  cliente C10: 0
  cliente C11: 0
  cliente C12: 0
- cliente C13: 5
+ cliente C13: 14
  cliente C14: 0
  cliente C15: 0
 
@@ -210,7 +210,7 @@ Producto B30_con ||
  cliente C12: 0
  cliente C13: 0
  cliente C14: 0
- cliente C15: 6.333333333333333
+ cliente C15: 5
 
 Producto B30_sin || 
  cliente C1: 75
@@ -268,49 +268,43 @@ Producto T_sin ||
 
 Impresion por pantalla de ratios de funcionamiento de las etapas por hora, dia y producto:
 
-Ratio normalizado de funcionamiento para el producto B15_con en la etapa PeladoMaquina en la hora 1 del dia Martes: 203.0666666666667
-Su ratio real de funcionamiento  es: 3046.0000000000005
+Ratio normalizado de funcionamiento para el producto B15_con en la etapa PeladoMaquina en la hora 1 del dia Martes: 235
+Su ratio real de funcionamiento  es: 3525
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto B15_con en la etapa PeladoMaquina en la hora 3 del dia Martes: 350.7333333333333
-Su ratio real de funcionamiento  es: 5260.999999999999
+Ratio normalizado de funcionamiento para el producto B15_con en la etapa PeladoMaquina en la hora 2 del dia Martes: 350
+Su ratio real de funcionamiento  es: 5250
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto B15_con en la etapa PeladoMaquina en la hora 5 del dia Martes: 31.2
-Su ratio real de funcionamiento  es: 468
+Ratio normalizado de funcionamiento para el producto B15_con en la etapa PeladoMano en la hora 2 del dia Martes: 179
+Su ratio real de funcionamiento  es: 2685
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto B15_con en la etapa PeladoMano en la hora 2 del dia Martes: 203.0666666666667
-Su ratio real de funcionamiento  es: 3046.0000000000005
+Ratio normalizado de funcionamiento para el producto B15_con en la etapa PeladoMano en la hora 3 del dia Martes: 203
+Su ratio real de funcionamiento  es: 3045
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto B15_con en la etapa PeladoMano en la hora 4 del dia Martes: 178.8666666666667
-Su ratio real de funcionamiento  es: 2683.0000000000005
+Ratio normalizado de funcionamiento para el producto B15_con en la etapa PeladoMano en la hora 4 del dia Martes: 203
+Su ratio real de funcionamiento  es: 3045
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto B15_con en la etapa PeladoMano en la hora 6 del dia Martes: 203.0666666666667
-Su ratio real de funcionamiento  es: 3046.0000000000005
+Ratio normalizado de funcionamiento para el producto B15_con en la etapa Confitadora en la hora 5 del dia Martes: 309
+Su ratio real de funcionamiento  es: 4635
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto B15_con en la etapa Confitadora en la hora 5 del dia Martes: 369.1333333333333
-Su ratio real de funcionamiento  es: 5537
+Ratio normalizado de funcionamiento para el producto B15_con en la etapa Confitadora en la hora 6 del dia Martes: 276
+Su ratio real de funcionamiento  es: 4140
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto B15_con en la etapa Confitadora en la hora 7 del dia Martes: 215.8666666666667
-Su ratio real de funcionamiento  es: 3238.0000000000005
+Ratio normalizado de funcionamiento para el producto B15_con en la etapa Bandejas en la hora 6 del dia Martes: 253
+Su ratio real de funcionamiento  es: 3795
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto B15_con en la etapa Bandejas en la hora 8 del dia Martes: 252.7333333333333
-Su ratio real de funcionamiento  es: 3790.9999999999995
+Ratio normalizado de funcionamiento para el producto B15_con en la etapa Bandejas en la hora 7 del dia Martes: 332
+Su ratio real de funcionamiento  es: 4980
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto B15_con en la etapa Bandejas en la hora 9 del dia Martes: 332.2666666666667
-Su ratio real de funcionamiento  es: 4984.000000000001
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto B15_con en la etapa Congelacion en la hora 9 del dia Martes: 252.7333333333333
-Su ratio real de funcionamiento  es: 758.1999999999998
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto B15_con en la etapa Congelacion en la hora 10 del dia Martes: 332.2666666666667
-Su ratio real de funcionamiento  es: 996.8000000000002
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto B15_con en la etapa Aceite en la hora 11 del dia Martes: 585
+Ratio normalizado de funcionamiento para el producto B15_con en la etapa Congelacion en la hora 9 del dia Martes: 585
 Su ratio real de funcionamiento  es: 1755
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto B15_con en la etapa Termosellado en la hora 12 del dia Martes: 585
+Ratio normalizado de funcionamiento para el producto B15_con en la etapa Aceite en la hora 10 del dia Martes: 585
 Su ratio real de funcionamiento  es: 1755
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto B15_con en la etapa Cajas en la hora 15 del dia Martes: 585
+Ratio normalizado de funcionamiento para el producto B15_con en la etapa Termosellado en la hora 11 del dia Martes: 585
+Su ratio real de funcionamiento  es: 1755
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B15_con en la etapa Cajas en la hora 14 del dia Martes: 585
 Su ratio real de funcionamiento  es: 1755
 _________________________________________________
 
@@ -319,114 +313,57 @@ _________________________________________________
 
 
 
-
-
-
-Ratio normalizado de funcionamiento para el producto B15_sin en la etapa PeladoMaquina en la hora 4 del dia Jueves: 203.0666666666667
-Su ratio real de funcionamiento  es: 3046.0000000000005
+Ratio normalizado de funcionamiento para el producto B15_sin en la etapa PeladoMaquina en la hora 5 del dia Lunes: 334
+Su ratio real de funcionamiento  es: 5010
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto B15_sin en la etapa PeladoMaquina en la hora 5 del dia Jueves: 148.6
-Su ratio real de funcionamiento  es: 2229
+Ratio normalizado de funcionamiento para el producto B15_sin en la etapa PeladoMano en la hora 6 del dia Lunes: 131
+Su ratio real de funcionamiento  es: 1965
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto B15_sin en la etapa PeladoMano en la hora 5 del dia Jueves: 203.0666666666667
-Su ratio real de funcionamiento  es: 3046.0000000000005
+Ratio normalizado de funcionamiento para el producto B15_sin en la etapa PeladoMano en la hora 7 del dia Lunes: 203
+Su ratio real de funcionamiento  es: 3045
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto B15_sin en la etapa PeladoMano en la hora 6 del dia Jueves: 148.6
-Su ratio real de funcionamiento  es: 2229
+Ratio normalizado de funcionamiento para el producto B15_sin en la etapa Confitadora en la hora 8 del dia Lunes: 334
+Su ratio real de funcionamiento  es: 5010
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto B15_sin en la etapa Confitadora en la hora 7 del dia Jueves: 351.6666666666667
-Su ratio real de funcionamiento  es: 5275
+Ratio normalizado de funcionamiento para el producto B15_sin en la etapa Bandejas en la hora 11 del dia Lunes: 2
+Su ratio real de funcionamiento  es: 30
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto B15_sin en la etapa Bandejas en la hora 8 del dia Jueves: 19.4
-Su ratio real de funcionamiento  es: 291
+Ratio normalizado de funcionamiento para el producto B15_sin en la etapa Bandejas en la hora 12 del dia Lunes: 332
+Su ratio real de funcionamiento  es: 4980
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto B15_sin en la etapa Bandejas en la hora 9 del dia Jueves: 332.2666666666667
-Su ratio real de funcionamiento  es: 4984.000000000001
+Ratio normalizado de funcionamiento para el producto B15_sin en la etapa Congelacion en la hora 13 del dia Lunes: 334
+Su ratio real de funcionamiento  es: 1002
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto B15_sin en la etapa Congelacion en la hora 12 del dia Jueves: 351.6666666666667
-Su ratio real de funcionamiento  es: 1055
+Ratio normalizado de funcionamiento para el producto B15_sin en la etapa Termosellado en la hora 14 del dia Lunes: 334
+Su ratio real de funcionamiento  es: 1002
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto B15_sin en la etapa Termosellado en la hora 13 del dia Jueves: 351.6666666666667
-Su ratio real de funcionamiento  es: 1055
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto B15_sin en la etapa Cajas en la hora 14 del dia Jueves: 351.6666666666667
-Su ratio real de funcionamiento  es: 1055
-_________________________________________________
-
-Ratio normalizado de funcionamiento para el producto B15_sin en la etapa PeladoMaquina en la hora 4 del dia Viernes: 92.33333333333333
-Su ratio real de funcionamiento  es: 1385
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto B15_sin en la etapa PeladoMano en la hora 6 del dia Viernes: 92.33333333333333
-Su ratio real de funcionamiento  es: 1385
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto B15_sin en la etapa Confitadora en la hora 7 del dia Viernes: 92.33333333333333
-Su ratio real de funcionamiento  es: 1385
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto B15_sin en la etapa Bandejas en la hora 8 del dia Viernes: 92.33333333333333
-Su ratio real de funcionamiento  es: 1385
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto B15_sin en la etapa Congelacion en la hora 11 del dia Viernes: 92.33333333333333
-Su ratio real de funcionamiento  es: 277
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto B15_sin en la etapa Termosellado en la hora 12 del dia Viernes: 92.33333333333333
-Su ratio real de funcionamiento  es: 277
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto B15_sin en la etapa Cajas en la hora 13 del dia Viernes: 92.33333333333333
-Su ratio real de funcionamiento  es: 277
+Ratio normalizado de funcionamiento para el producto B15_sin en la etapa Cajas en la hora 15 del dia Lunes: 334
+Su ratio real de funcionamiento  es: 1002
 _________________________________________________
 
 
 
-Ratio normalizado de funcionamiento para el producto B24_con en la etapa PeladoMaquina en la hora 1 del dia Lunes: 219.2083333333333
-Su ratio real de funcionamiento  es: 5260.999999999999
+
+Ratio normalizado de funcionamiento para el producto B15_sin en la etapa PeladoMaquina en la hora 4 del dia Viernes: 110
+Su ratio real de funcionamiento  es: 1650
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto B24_con en la etapa PeladoMaquina en la hora 2 del dia Lunes: 219.2083333333333
-Su ratio real de funcionamiento  es: 5260.999999999999
+Ratio normalizado de funcionamiento para el producto B15_sin en la etapa PeladoMano en la hora 5 del dia Viernes: 110
+Su ratio real de funcionamiento  es: 1650
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto B24_con en la etapa PeladoMaquina en la hora 3 del dia Lunes: 12.08333333333333
-Su ratio real de funcionamiento  es: 289.99999999999994
+Ratio normalizado de funcionamiento para el producto B15_sin en la etapa Confitadora en la hora 6 del dia Viernes: 110
+Su ratio real de funcionamiento  es: 1650
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto B24_con en la etapa PeladoMano en la hora 2 del dia Lunes: 126.9166666666667
-Su ratio real de funcionamiento  es: 3046.000000000001
+Ratio normalizado de funcionamiento para el producto B15_sin en la etapa Bandejas en la hora 9 del dia Viernes: 110
+Su ratio real de funcionamiento  es: 1650
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto B24_con en la etapa PeladoMano en la hora 3 del dia Lunes: 69.75
-Su ratio real de funcionamiento  es: 1674
+Ratio normalizado de funcionamiento para el producto B15_sin en la etapa Congelacion en la hora 10 del dia Viernes: 110
+Su ratio real de funcionamiento  es: 330
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto B24_con en la etapa PeladoMano en la hora 4 del dia Lunes: 126.9166666666667
-Su ratio real de funcionamiento  es: 3046.000000000001
+Ratio normalizado de funcionamiento para el producto B15_sin en la etapa Termosellado en la hora 11 del dia Viernes: 110
+Su ratio real de funcionamiento  es: 330
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto B24_con en la etapa PeladoMano en la hora 5 del dia Lunes: 126.9166666666667
-Su ratio real de funcionamiento  es: 3046.000000000001
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto B24_con en la etapa Confitadora en la hora 6 del dia Lunes: 230.7083333333333
-Su ratio real de funcionamiento  es: 5536.999999999999
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto B24_con en la etapa Confitadora en la hora 7 del dia Lunes: 219.7916666666667
-Su ratio real de funcionamiento  es: 5275.000000000001
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto B24_con en la etapa Bandejas en la hora 7 del dia Lunes: 173.0416666666667
-Su ratio real de funcionamiento  es: 4153.000000000001
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto B24_con en la etapa Bandejas en la hora 8 del dia Lunes: 173.0416666666667
-Su ratio real de funcionamiento  es: 4153.000000000001
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto B24_con en la etapa Bandejas en la hora 10 del dia Lunes: 104.4166666666667
-Su ratio real de funcionamiento  es: 2506.000000000001
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto B24_con en la etapa Congelacion en la hora 8 del dia Lunes: 173.0416666666667
-Su ratio real de funcionamiento  es: 692.1666666666669
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto B24_con en la etapa Congelacion en la hora 11 del dia Lunes: 277.4583333333333
-Su ratio real de funcionamiento  es: 1109.8333333333333
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto B24_con en la etapa Aceite en la hora 13 del dia Lunes: 450.5
-Su ratio real de funcionamiento  es: 1802
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto B24_con en la etapa Termosellado en la hora 14 del dia Lunes: 450.5
-Su ratio real de funcionamiento  es: 1802
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto B24_con en la etapa Cajas en la hora 15 del dia Lunes: 450.5
-Su ratio real de funcionamiento  es: 1802
+Ratio normalizado de funcionamiento para el producto B15_sin en la etapa Cajas en la hora 15 del dia Viernes: 110
+Su ratio real de funcionamiento  es: 330
 _________________________________________________
 
 
@@ -434,81 +371,162 @@ _________________________________________________
 
 
 
-
-
-
-
-
-Ratio normalizado de funcionamiento para el producto B24_sin en la etapa PeladoMaquina en la hora 2 del dia Viernes: 219.2083333333333
-Su ratio real de funcionamiento  es: 5260.999999999999
+Ratio normalizado de funcionamiento para el producto B24_con en la etapa PeladoMaquina en la hora 2 del dia Jueves: 126
+Su ratio real de funcionamiento  es: 3024
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto B24_sin en la etapa PeladoMaquina en la hora 3 del dia Viernes: 160.5833333333333
-Su ratio real de funcionamiento  es: 3853.999999999999
+Ratio normalizado de funcionamiento para el producto B24_con en la etapa PeladoMaquina en la hora 4 del dia Jueves: 51
+Su ratio real de funcionamiento  es: 1224
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto B24_sin en la etapa PeladoMano en la hora 3 del dia Viernes: 126.9166666666667
-Su ratio real de funcionamiento  es: 3046.000000000001
+Ratio normalizado de funcionamiento para el producto B24_con en la etapa PeladoMano en la hora 3 del dia Jueves: 126
+Su ratio real de funcionamiento  es: 3024
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto B24_sin en la etapa PeladoMano en la hora 4 del dia Viernes: 125.9583333333333
-Su ratio real de funcionamiento  es: 3022.999999999999
+Ratio normalizado de funcionamiento para el producto B24_con en la etapa PeladoMano en la hora 5 del dia Jueves: 51
+Su ratio real de funcionamiento  es: 1224
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto B24_sin en la etapa PeladoMano en la hora 5 del dia Viernes: 126.9166666666667
-Su ratio real de funcionamiento  es: 3046.000000000001
+Ratio normalizado de funcionamiento para el producto B24_con en la etapa Confitadora en la hora 6 del dia Jueves: 177
+Su ratio real de funcionamiento  es: 4248
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto B24_sin en la etapa Confitadora en la hora 5 del dia Viernes: 173.0416666666667
-Su ratio real de funcionamiento  es: 4153.000000000001
+Ratio normalizado de funcionamiento para el producto B24_con en la etapa Bandejas en la hora 7 del dia Jueves: 4
+Su ratio real de funcionamiento  es: 96
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto B24_sin en la etapa Confitadora en la hora 6 del dia Viernes: 206.75
-Su ratio real de funcionamiento  es: 4962
+Ratio normalizado de funcionamiento para el producto B24_con en la etapa Bandejas en la hora 8 del dia Jueves: 173
+Su ratio real de funcionamiento  es: 4152
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto B24_sin en la etapa Bandejas en la hora 6 del dia Viernes: 173.0416666666667
-Su ratio real de funcionamiento  es: 4153.000000000001
+Ratio normalizado de funcionamiento para el producto B24_con en la etapa Congelacion en la hora 9 del dia Jueves: 177
+Su ratio real de funcionamiento  es: 708
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto B24_sin en la etapa Bandejas en la hora 7 del dia Viernes: 173.0416666666667
-Su ratio real de funcionamiento  es: 4153.000000000001
+Ratio normalizado de funcionamiento para el producto B24_con en la etapa Aceite en la hora 10 del dia Jueves: 177
+Su ratio real de funcionamiento  es: 708
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto B24_sin en la etapa Bandejas en la hora 9 del dia Viernes: 33.70833333333337
-Su ratio real de funcionamiento  es: 809.0000000000009
+Ratio normalizado de funcionamiento para el producto B24_con en la etapa Termosellado en la hora 11 del dia Jueves: 177
+Su ratio real de funcionamiento  es: 708
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto B24_sin en la etapa Congelacion en la hora 10 del dia Viernes: 379.7916666666667
-Su ratio real de funcionamiento  es: 1519.1666666666667
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto B24_sin en la etapa Termosellado en la hora 11 del dia Viernes: 379.7916666666667
-Su ratio real de funcionamiento  es: 1519.1666666666667
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto B24_sin en la etapa Cajas en la hora 12 del dia Viernes: 379.7916666666667
-Su ratio real de funcionamiento  es: 1519.1666666666667
+Ratio normalizado de funcionamiento para el producto B24_con en la etapa Cajas en la hora 15 del dia Jueves: 177
+Su ratio real de funcionamiento  es: 708
 _________________________________________________
 
 
 
+Ratio normalizado de funcionamiento para el producto B24_con en la etapa PeladoMaquina en la hora 1 del dia Domingo: 104
+Su ratio real de funcionamiento  es: 2496
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B24_con en la etapa PeladoMaquina en la hora 3 del dia Domingo: 126
+Su ratio real de funcionamiento  es: 3024
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B24_con en la etapa PeladoMano en la hora 2 del dia Domingo: 104
+Su ratio real de funcionamiento  es: 2496
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B24_con en la etapa PeladoMano en la hora 4 del dia Domingo: 126
+Su ratio real de funcionamiento  es: 3024
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B24_con en la etapa Confitadora en la hora 8 del dia Domingo: 230
+Su ratio real de funcionamiento  es: 5520
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B24_con en la etapa Bandejas en la hora 9 del dia Domingo: 57
+Su ratio real de funcionamiento  es: 1368
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B24_con en la etapa Bandejas en la hora 10 del dia Domingo: 173
+Su ratio real de funcionamiento  es: 4152
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B24_con en la etapa Congelacion en la hora 12 del dia Domingo: 230
+Su ratio real de funcionamiento  es: 920
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B24_con en la etapa Aceite en la hora 13 del dia Domingo: 230
+Su ratio real de funcionamiento  es: 920
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B24_con en la etapa Termosellado en la hora 14 del dia Domingo: 230
+Su ratio real de funcionamiento  es: 920
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B24_con en la etapa Cajas en la hora 15 del dia Domingo: 230
+Su ratio real de funcionamiento  es: 920
+_________________________________________________
 
 
 
+Ratio normalizado de funcionamiento para el producto B24_sin en la etapa PeladoMaquina en la hora 5 del dia Miercoles: 197
+Su ratio real de funcionamiento  es: 4728
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B24_sin en la etapa PeladoMano en la hora 6 del dia Miercoles: 126
+Su ratio real de funcionamiento  es: 3024
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B24_sin en la etapa PeladoMano en la hora 7 del dia Miercoles: 71
+Su ratio real de funcionamiento  es: 1704
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B24_sin en la etapa Confitadora en la hora 8 del dia Miercoles: 197
+Su ratio real de funcionamiento  es: 4728
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B24_sin en la etapa Bandejas en la hora 9 del dia Miercoles: 24
+Su ratio real de funcionamiento  es: 576
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B24_sin en la etapa Bandejas en la hora 10 del dia Miercoles: 173
+Su ratio real de funcionamiento  es: 4152
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B24_sin en la etapa Congelacion en la hora 11 del dia Miercoles: 197
+Su ratio real de funcionamiento  es: 788
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B24_sin en la etapa Termosellado en la hora 12 del dia Miercoles: 197
+Su ratio real de funcionamiento  es: 788
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B24_sin en la etapa Cajas en la hora 13 del dia Miercoles: 197
+Su ratio real de funcionamiento  es: 788
+_________________________________________________
 
 
 
-Ratio normalizado de funcionamiento para el producto B6_con en la etapa PeladoMaquina en la hora 2 del dia Domingo: 499
+Ratio normalizado de funcionamiento para el producto B24_sin en la etapa PeladoMaquina en la hora 1 del dia Sabado: 101
+Su ratio real de funcionamiento  es: 2424
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B24_sin en la etapa PeladoMaquina en la hora 5 del dia Sabado: 126
+Su ratio real de funcionamiento  es: 3024
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B24_sin en la etapa PeladoMano en la hora 4 del dia Sabado: 101
+Su ratio real de funcionamiento  es: 2424
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B24_sin en la etapa PeladoMano en la hora 6 del dia Sabado: 126
+Su ratio real de funcionamiento  es: 3024
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B24_sin en la etapa Confitadora en la hora 7 del dia Sabado: 227
+Su ratio real de funcionamiento  es: 5448
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B24_sin en la etapa Bandejas en la hora 9 del dia Sabado: 54
+Su ratio real de funcionamiento  es: 1296
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B24_sin en la etapa Bandejas en la hora 10 del dia Sabado: 173
+Su ratio real de funcionamiento  es: 4152
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B24_sin en la etapa Congelacion en la hora 11 del dia Sabado: 227
+Su ratio real de funcionamiento  es: 908
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B24_sin en la etapa Termosellado en la hora 13 del dia Sabado: 227
+Su ratio real de funcionamiento  es: 908
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B24_sin en la etapa Cajas en la hora 14 del dia Sabado: 227
+Su ratio real de funcionamiento  es: 908
+_________________________________________________
+
+
+Ratio normalizado de funcionamiento para el producto B6_con en la etapa PeladoMaquina en la hora 2 del dia Lunes: 499
 Su ratio real de funcionamiento  es: 2994
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto B6_con en la etapa PeladoMano en la hora 3 del dia Domingo: 499
+Ratio normalizado de funcionamiento para el producto B6_con en la etapa PeladoMano en la hora 5 del dia Lunes: 499
 Su ratio real de funcionamiento  es: 2994
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto B6_con en la etapa Confitadora en la hora 4 del dia Domingo: 499
+Ratio normalizado de funcionamiento para el producto B6_con en la etapa Confitadora en la hora 7 del dia Lunes: 499
 Su ratio real de funcionamiento  es: 2994
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto B6_con en la etapa Bandejas en la hora 5 del dia Domingo: 499
+Ratio normalizado de funcionamiento para el producto B6_con en la etapa Bandejas en la hora 8 del dia Lunes: 499
 Su ratio real de funcionamiento  es: 2994
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto B6_con en la etapa Congelacion en la hora 6 del dia Domingo: 499
+Ratio normalizado de funcionamiento para el producto B6_con en la etapa Congelacion en la hora 9 del dia Lunes: 499
 Su ratio real de funcionamiento  es: 499
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto B6_con en la etapa Aceite en la hora 11 del dia Domingo: 499
+Ratio normalizado de funcionamiento para el producto B6_con en la etapa Aceite en la hora 11 del dia Lunes: 499
 Su ratio real de funcionamiento  es: 499
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto B6_con en la etapa Termosellado en la hora 12 del dia Domingo: 499
+Ratio normalizado de funcionamiento para el producto B6_con en la etapa Termosellado en la hora 12 del dia Lunes: 499
 Su ratio real de funcionamiento  es: 499
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto B6_con en la etapa Cajas en la hora 13 del dia Domingo: 499
+Ratio normalizado de funcionamiento para el producto B6_con en la etapa Cajas en la hora 13 del dia Lunes: 499
 Su ratio real de funcionamiento  es: 499
 _________________________________________________
 
@@ -518,160 +536,146 @@ _________________________________________________
 
 
 
-Ratio normalizado de funcionamiento para el producto B6_sin en la etapa PeladoMaquina en la hora 1 del dia Domingo: 507.6666666666667
-Su ratio real de funcionamiento  es: 3046
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto B6_sin en la etapa PeladoMaquina en la hora 3 del dia Domingo: 51.33333333333334
-Su ratio real de funcionamiento  es: 308.00000000000006
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto B6_sin en la etapa PeladoMano en la hora 2 del dia Domingo: 507.6666666666667
-Su ratio real de funcionamiento  es: 3046
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto B6_sin en la etapa PeladoMano en la hora 4 del dia Domingo: 51.33333333333334
-Su ratio real de funcionamiento  es: 308.00000000000006
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto B6_sin en la etapa Confitadora en la hora 5 del dia Domingo: 559
-Su ratio real de funcionamiento  es: 3354
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto B6_sin en la etapa Bandejas en la hora 6 del dia Domingo: 553.6666666666666
-Su ratio real de funcionamiento  es: 3322
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto B6_sin en la etapa Bandejas en la hora 7 del dia Domingo: 5.333333333333333
-Su ratio real de funcionamiento  es: 32
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto B6_sin en la etapa Congelacion en la hora 7 del dia Domingo: 553.6666666666666
-Su ratio real de funcionamiento  es: 553.6666666666666
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto B6_sin en la etapa Congelacion en la hora 8 del dia Domingo: 5.333333333333333
-Su ratio real de funcionamiento  es: 5.333333333333333
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto B6_sin en la etapa Termosellado en la hora 10 del dia Domingo: 559
-Su ratio real de funcionamiento  es: 559
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto B6_sin en la etapa Cajas en la hora 12 del dia Domingo: 559
-Su ratio real de funcionamiento  es: 559
-_________________________________________________
 
 
+Ratio normalizado de funcionamiento para el producto B6_sin en la etapa PeladoMaquina en la hora 2 del dia Miercoles: 507
+Su ratio real de funcionamiento  es: 3042
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B6_sin en la etapa PeladoMano en la hora 5 del dia Miercoles: 507
+Su ratio real de funcionamiento  es: 3042
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B6_sin en la etapa Confitadora en la hora 7 del dia Miercoles: 507
+Su ratio real de funcionamiento  es: 3042
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B6_sin en la etapa Bandejas en la hora 8 del dia Miercoles: 507
+Su ratio real de funcionamiento  es: 3042
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B6_sin en la etapa Congelacion en la hora 10 del dia Miercoles: 507
+Su ratio real de funcionamiento  es: 507
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B6_sin en la etapa Termosellado en la hora 11 del dia Miercoles: 507
+Su ratio real de funcionamiento  es: 507
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B6_sin en la etapa Cajas en la hora 12 del dia Miercoles: 507
+Su ratio real de funcionamiento  es: 507
+_________________________________________________
 
-Ratio normalizado de funcionamiento para el producto B30_con en la etapa PeladoMaquina en la hora 1 del dia Miercoles: 175.3666666666667
-Su ratio real de funcionamiento  es: 5261.000000000001
+Ratio normalizado de funcionamiento para el producto B6_sin en la etapa PeladoMaquina en la hora 5 del dia Jueves: 52
+Su ratio real de funcionamiento  es: 312
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto B30_con en la etapa PeladoMaquina en la hora 2 del dia Miercoles: 175.3666666666667
-Su ratio real de funcionamiento  es: 5261.000000000001
+Ratio normalizado de funcionamiento para el producto B6_sin en la etapa PeladoMano en la hora 6 del dia Jueves: 52
+Su ratio real de funcionamiento  es: 312
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto B30_con en la etapa PeladoMaquina en la hora 4 del dia Miercoles: 22.6
-Su ratio real de funcionamiento  es: 678
+Ratio normalizado de funcionamiento para el producto B6_sin en la etapa Confitadora en la hora 7 del dia Jueves: 52
+Su ratio real de funcionamiento  es: 312
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto B30_con en la etapa PeladoMano en la hora 2 del dia Miercoles: 101.5333333333333
-Su ratio real de funcionamiento  es: 3045.999999999999
+Ratio normalizado de funcionamiento para el producto B6_sin en la etapa Bandejas en la hora 10 del dia Jueves: 52
+Su ratio real de funcionamiento  es: 312
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto B30_con en la etapa PeladoMano en la hora 3 del dia Miercoles: 101.5333333333333
-Su ratio real de funcionamiento  es: 3045.999999999999
+Ratio normalizado de funcionamiento para el producto B6_sin en la etapa Congelacion en la hora 11 del dia Jueves: 52
+Su ratio real de funcionamiento  es: 52
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto B30_con en la etapa PeladoMano en la hora 4 del dia Miercoles: 101.5333333333333
-Su ratio real de funcionamiento  es: 3045.999999999999
+Ratio normalizado de funcionamiento para el producto B6_sin en la etapa Termosellado en la hora 12 del dia Jueves: 52
+Su ratio real de funcionamiento  es: 52
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto B30_con en la etapa PeladoMano en la hora 5 del dia Miercoles: 68.73333333333333
-Su ratio real de funcionamiento  es: 2062
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto B30_con en la etapa Confitadora en la hora 4 del dia Miercoles: 92.3
-Su ratio real de funcionamiento  es: 2769
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto B30_con en la etapa Confitadora en la hora 5 del dia Miercoles: 184.5666666666667
-Su ratio real de funcionamiento  es: 5537.000000000001
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto B30_con en la etapa Confitadora en la hora 6 del dia Miercoles: 96.46666666666667
-Su ratio real de funcionamiento  es: 2894
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto B30_con en la etapa Bandejas en la hora 5 del dia Miercoles: 92.3
-Su ratio real de funcionamiento  es: 2769
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto B30_con en la etapa Bandejas en la hora 7 del dia Miercoles: 92.3
-Su ratio real de funcionamiento  es: 2769
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto B30_con en la etapa Bandejas en la hora 8 del dia Miercoles: 92.3
-Su ratio real de funcionamiento  es: 2769
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto B30_con en la etapa Bandejas en la hora 9 del dia Miercoles: 4.133333333333334
-Su ratio real de funcionamiento  es: 124.00000000000001
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto B30_con en la etapa Bandejas en la hora 10 del dia Miercoles: 92.3
-Su ratio real de funcionamiento  es: 2769
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto B30_con en la etapa Congelacion en la hora 11 del dia Miercoles: 373.3333333333333
-Su ratio real de funcionamiento  es: 1866.6666666666665
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto B30_con en la etapa Aceite en la hora 12 del dia Miercoles: 373.3333333333333
-Su ratio real de funcionamiento  es: 1866.6666666666665
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto B30_con en la etapa Termosellado en la hora 13 del dia Miercoles: 373.3333333333333
-Su ratio real de funcionamiento  es: 1866.6666666666665
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto B30_con en la etapa Cajas en la hora 15 del dia Miercoles: 373.3333333333333
-Su ratio real de funcionamiento  es: 1866.6666666666665
+Ratio normalizado de funcionamiento para el producto B6_sin en la etapa Cajas en la hora 13 del dia Jueves: 52
+Su ratio real de funcionamiento  es: 52
 _________________________________________________
 
 
 
 
+Ratio normalizado de funcionamiento para el producto B30_con en la etapa PeladoMaquina en la hora 1 del dia Lunes: 143
+Su ratio real de funcionamiento  es: 4290
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B30_con en la etapa PeladoMano en la hora 3 del dia Lunes: 42
+Su ratio real de funcionamiento  es: 1260
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B30_con en la etapa PeladoMano en la hora 4 del dia Lunes: 101
+Su ratio real de funcionamiento  es: 3030
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B30_con en la etapa Confitadora en la hora 6 del dia Lunes: 143
+Su ratio real de funcionamiento  es: 4290
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B30_con en la etapa Bandejas en la hora 9 del dia Lunes: 51
+Su ratio real de funcionamiento  es: 1530
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B30_con en la etapa Bandejas en la hora 10 del dia Lunes: 92
+Su ratio real de funcionamiento  es: 2760
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B30_con en la etapa Congelacion en la hora 10 del dia Lunes: 51
+Su ratio real de funcionamiento  es: 255
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B30_con en la etapa Congelacion en la hora 11 del dia Lunes: 92
+Su ratio real de funcionamiento  es: 460
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B30_con en la etapa Aceite en la hora 12 del dia Lunes: 143
+Su ratio real de funcionamiento  es: 715
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B30_con en la etapa Termosellado en la hora 13 del dia Lunes: 143
+Su ratio real de funcionamiento  es: 715
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B30_con en la etapa Cajas en la hora 14 del dia Lunes: 143
+Su ratio real de funcionamiento  es: 715
+_________________________________________________
+
+Ratio normalizado de funcionamiento para el producto B30_con en la etapa PeladoMaquina en la hora 4 del dia Martes: 144
+Su ratio real de funcionamiento  es: 4320
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B30_con en la etapa PeladoMano en la hora 5 del dia Martes: 101
+Su ratio real de funcionamiento  es: 3030
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B30_con en la etapa PeladoMano en la hora 6 del dia Martes: 43
+Su ratio real de funcionamiento  es: 1290
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B30_con en la etapa Confitadora en la hora 7 del dia Martes: 144
+Su ratio real de funcionamiento  es: 4320
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B30_con en la etapa Bandejas en la hora 8 del dia Martes: 52
+Su ratio real de funcionamiento  es: 1560
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B30_con en la etapa Bandejas en la hora 9 del dia Martes: 92
+Su ratio real de funcionamiento  es: 2760
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B30_con en la etapa Congelacion en la hora 10 del dia Martes: 144
+Su ratio real de funcionamiento  es: 720
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B30_con en la etapa Aceite en la hora 11 del dia Martes: 144
+Su ratio real de funcionamiento  es: 720
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B30_con en la etapa Termosellado en la hora 12 del dia Martes: 144
+Su ratio real de funcionamiento  es: 720
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B30_con en la etapa Cajas en la hora 13 del dia Martes: 144
+Su ratio real de funcionamiento  es: 720
+_________________________________________________
 
 
-Ratio normalizado de funcionamiento para el producto B30_sin en la etapa PeladoMaquina en la hora 2 del dia Martes: 144.1666666666667
-Su ratio real de funcionamiento  es: 4325.000000000002
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto B30_sin en la etapa PeladoMano en la hora 3 del dia Martes: 42.63333333333333
-Su ratio real de funcionamiento  es: 1279
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto B30_sin en la etapa PeladoMano en la hora 5 del dia Martes: 101.5333333333333
-Su ratio real de funcionamiento  es: 3045.999999999999
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto B30_sin en la etapa Confitadora en la hora 6 del dia Martes: 144.1666666666667
-Su ratio real de funcionamiento  es: 4325.000000000002
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto B30_sin en la etapa Bandejas en la hora 10 del dia Martes: 51.86666666666667
-Su ratio real de funcionamiento  es: 1556
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto B30_sin en la etapa Bandejas en la hora 11 del dia Martes: 92.3
-Su ratio real de funcionamiento  es: 2769
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto B30_sin en la etapa Congelacion en la hora 12 del dia Martes: 144.1666666666667
-Su ratio real de funcionamiento  es: 720.8333333333336
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto B30_sin en la etapa Termosellado en la hora 13 del dia Martes: 144.1666666666667
-Su ratio real de funcionamiento  es: 720.8333333333336
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto B30_sin en la etapa Cajas en la hora 14 del dia Martes: 144.1666666666667
-Su ratio real de funcionamiento  es: 720.8333333333336
-_________________________________________________
 
 
-Ratio normalizado de funcionamiento para el producto B30_sin en la etapa PeladoMaquina en la hora 1 del dia Jueves: 150.8333333333333
-Su ratio real de funcionamiento  es: 4524.999999999998
+Ratio normalizado de funcionamiento para el producto B30_con en la etapa PeladoMaquina en la hora 4 del dia Sabado: 85
+Su ratio real de funcionamiento  es: 2550
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto B30_sin en la etapa PeladoMano en la hora 3 del dia Jueves: 101.5333333333333
-Su ratio real de funcionamiento  es: 3045.999999999999
+Ratio normalizado de funcionamiento para el producto B30_con en la etapa PeladoMano en la hora 5 del dia Sabado: 85
+Su ratio real de funcionamiento  es: 2550
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto B30_sin en la etapa PeladoMano en la hora 7 del dia Jueves: 49.3
-Su ratio real de funcionamiento  es: 1479
+Ratio normalizado de funcionamiento para el producto B30_con en la etapa Confitadora en la hora 6 del dia Sabado: 85
+Su ratio real de funcionamiento  es: 2550
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto B30_sin en la etapa Confitadora en la hora 8 del dia Jueves: 150.8333333333333
-Su ratio real de funcionamiento  es: 4524.999999999998
+Ratio normalizado de funcionamiento para el producto B30_con en la etapa Bandejas en la hora 8 del dia Sabado: 85
+Su ratio real de funcionamiento  es: 2550
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto B30_sin en la etapa Bandejas en la hora 10 del dia Jueves: 58.53333333333333
-Su ratio real de funcionamiento  es: 1756
+Ratio normalizado de funcionamiento para el producto B30_con en la etapa Congelacion en la hora 9 del dia Sabado: 85
+Su ratio real de funcionamiento  es: 425
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto B30_sin en la etapa Bandejas en la hora 11 del dia Jueves: 92.3
-Su ratio real de funcionamiento  es: 2769
+Ratio normalizado de funcionamiento para el producto B30_con en la etapa Aceite en la hora 10 del dia Sabado: 85
+Su ratio real de funcionamiento  es: 425
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto B30_sin en la etapa Congelacion en la hora 13 del dia Jueves: 150.8333333333333
-Su ratio real de funcionamiento  es: 754.1666666666664
+Ratio normalizado de funcionamiento para el producto B30_con en la etapa Termosellado en la hora 14 del dia Sabado: 85
+Su ratio real de funcionamiento  es: 425
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto B30_sin en la etapa Termosellado en la hora 14 del dia Jueves: 150.8333333333333
-Su ratio real de funcionamiento  es: 754.1666666666664
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto B30_sin en la etapa Cajas en la hora 15 del dia Jueves: 150.8333333333333
-Su ratio real de funcionamiento  es: 754.1666666666664
+Ratio normalizado de funcionamiento para el producto B30_con en la etapa Cajas en la hora 15 del dia Sabado: 85
+Su ratio real de funcionamiento  es: 425
 _________________________________________________
 
 
@@ -679,114 +683,142 @@ _________________________________________________
 
 
 
+Ratio normalizado de funcionamiento para el producto B30_sin en la etapa PeladoMaquina en la hora 1 del dia Viernes: 175
+Su ratio real de funcionamiento  es: 5250
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B30_sin en la etapa PeladoMaquina en la hora 2 del dia Viernes: 120
+Su ratio real de funcionamiento  es: 3600
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B30_sin en la etapa PeladoMano en la hora 3 del dia Viernes: 101
+Su ratio real de funcionamiento  es: 3030
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B30_sin en la etapa PeladoMano en la hora 4 del dia Viernes: 93
+Su ratio real de funcionamiento  es: 2790
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B30_sin en la etapa PeladoMano en la hora 6 del dia Viernes: 101
+Su ratio real de funcionamiento  es: 3030
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B30_sin en la etapa Confitadora en la hora 5 del dia Viernes: 184
+Su ratio real de funcionamiento  es: 5520
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B30_sin en la etapa Confitadora en la hora 7 del dia Viernes: 111
+Su ratio real de funcionamiento  es: 3330
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B30_sin en la etapa Bandejas en la hora 6 del dia Viernes: 19
+Su ratio real de funcionamiento  es: 570
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B30_sin en la etapa Bandejas en la hora 7 del dia Viernes: 92
+Su ratio real de funcionamiento  es: 2760
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B30_sin en la etapa Bandejas en la hora 8 del dia Viernes: 92
+Su ratio real de funcionamiento  es: 2760
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B30_sin en la etapa Bandejas en la hora 10 del dia Viernes: 92
+Su ratio real de funcionamiento  es: 2760
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B30_sin en la etapa Congelacion en la hora 11 del dia Viernes: 295
+Su ratio real de funcionamiento  es: 1475
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B30_sin en la etapa Termosellado en la hora 12 del dia Viernes: 295
+Su ratio real de funcionamiento  es: 1475
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto B30_sin en la etapa Cajas en la hora 13 del dia Viernes: 295
+Su ratio real de funcionamiento  es: 1475
+_________________________________________________
 
 
 
-Ratio normalizado de funcionamiento para el producto T_con en la etapa PeladoMaquina en la hora 1 del dia Sabado: 262
-Su ratio real de funcionamiento  es: 5240
+
+
+
+Ratio normalizado de funcionamiento para el producto T_con en la etapa PeladoMaquina en la hora 1 del dia Jueves: 152
+Su ratio real de funcionamiento  es: 3040
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto T_con en la etapa PeladoMano en la hora 2 del dia Sabado: 109.7
-Su ratio real de funcionamiento  es: 2194
+Ratio normalizado de funcionamiento para el producto T_con en la etapa PeladoMaquina en la hora 3 del dia Jueves: 110
+Su ratio real de funcionamiento  es: 2200
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto T_con en la etapa PeladoMano en la hora 5 del dia Sabado: 152.3
-Su ratio real de funcionamiento  es: 3046
+Ratio normalizado de funcionamiento para el producto T_con en la etapa PeladoMano en la hora 2 del dia Jueves: 152
+Su ratio real de funcionamiento  es: 3040
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto T_con en la etapa Cortado en la hora 3 del dia Sabado: 109.7
-Su ratio real de funcionamiento  es: 2194
+Ratio normalizado de funcionamiento para el producto T_con en la etapa PeladoMano en la hora 4 del dia Jueves: 110
+Su ratio real de funcionamiento  es: 2200
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto T_con en la etapa Cortado en la hora 6 del dia Sabado: 152.3
-Su ratio real de funcionamiento  es: 3046
+Ratio normalizado de funcionamiento para el producto T_con en la etapa Cortado en la hora 3 del dia Jueves: 152
+Su ratio real de funcionamiento  es: 3040
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto T_con en la etapa Bandejas en la hora 4 del dia Sabado: 109.7
-Su ratio real de funcionamiento  es: 2194
+Ratio normalizado de funcionamiento para el producto T_con en la etapa Cortado en la hora 5 del dia Jueves: 110
+Su ratio real de funcionamiento  es: 2200
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto T_con en la etapa Bandejas en la hora 8 del dia Sabado: 152.3
-Su ratio real de funcionamiento  es: 3046
+Ratio normalizado de funcionamiento para el producto T_con en la etapa Bandejas en la hora 4 del dia Jueves: 13
+Su ratio real de funcionamiento  es: 260
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto T_con en la etapa Congelacion en la hora 7 del dia Sabado: 109.7
-Su ratio real de funcionamiento  es: 548.5
+Ratio normalizado de funcionamiento para el producto T_con en la etapa Bandejas en la hora 6 del dia Jueves: 249
+Su ratio real de funcionamiento  es: 4980
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto T_con en la etapa Congelacion en la hora 9 del dia Sabado: 152.3
-Su ratio real de funcionamiento  es: 761.5
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto T_con en la etapa Aceite en la hora 10 del dia Sabado: 262
+Ratio normalizado de funcionamiento para el producto T_con en la etapa Congelacion en la hora 8 del dia Jueves: 262
 Su ratio real de funcionamiento  es: 1310
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto T_con en la etapa Termosellado en la hora 11 del dia Sabado: 262
+Ratio normalizado de funcionamiento para el producto T_con en la etapa Aceite en la hora 9 del dia Jueves: 262
 Su ratio real de funcionamiento  es: 1310
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto T_con en la etapa Cajas en la hora 12 del dia Sabado: 262
+Ratio normalizado de funcionamiento para el producto T_con en la etapa Termosellado en la hora 10 del dia Jueves: 262
+Su ratio real de funcionamiento  es: 1310
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto T_con en la etapa Cajas en la hora 11 del dia Jueves: 262
 Su ratio real de funcionamiento  es: 1310
 _________________________________________________
 
 
-Ratio normalizado de funcionamiento para el producto T_sin en la etapa PeladoMaquina en la hora 4 del dia Lunes: 74.4
-Su ratio real de funcionamiento  es: 1488
+
+
+
+
+Ratio normalizado de funcionamiento para el producto T_sin en la etapa PeladoMaquina en la hora 1 del dia Miercoles: 171
+Su ratio real de funcionamiento  es: 3420
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto T_sin en la etapa PeladoMano en la hora 6 del dia Lunes: 74.4
-Su ratio real de funcionamiento  es: 1488
+Ratio normalizado de funcionamiento para el producto T_sin en la etapa PeladoMano en la hora 2 del dia Miercoles: 152
+Su ratio real de funcionamiento  es: 3040
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto T_sin en la etapa Cortado en la hora 7 del dia Lunes: 74.4
-Su ratio real de funcionamiento  es: 1488
+Ratio normalizado de funcionamiento para el producto T_sin en la etapa PeladoMano en la hora 3 del dia Miercoles: 19
+Su ratio real de funcionamiento  es: 380
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto T_sin en la etapa Bandejas en la hora 11 del dia Lunes: 74.4
-Su ratio real de funcionamiento  es: 1488
+Ratio normalizado de funcionamiento para el producto T_sin en la etapa Cortado en la hora 4 del dia Miercoles: 171
+Su ratio real de funcionamiento  es: 3420
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto T_sin en la etapa Congelacion en la hora 12 del dia Lunes: 74.4
-Su ratio real de funcionamiento  es: 372
+Ratio normalizado de funcionamiento para el producto T_sin en la etapa Bandejas en la hora 6 del dia Miercoles: 171
+Su ratio real de funcionamiento  es: 3420
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto T_sin en la etapa Termosellado en la hora 13 del dia Lunes: 74.4
-Su ratio real de funcionamiento  es: 372
+Ratio normalizado de funcionamiento para el producto T_sin en la etapa Congelacion en la hora 12 del dia Miercoles: 171
+Su ratio real de funcionamiento  es: 855
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto T_sin en la etapa Cajas en la hora 14 del dia Lunes: 74.4
-Su ratio real de funcionamiento  es: 372
+Ratio normalizado de funcionamiento para el producto T_sin en la etapa Termosellado en la hora 13 del dia Miercoles: 171
+Su ratio real de funcionamiento  es: 855
+_________________________________________________
+Ratio normalizado de funcionamiento para el producto T_sin en la etapa Cajas en la hora 14 del dia Miercoles: 171
+Su ratio real de funcionamiento  es: 855
 _________________________________________________
 
 
 
 
-
-Ratio normalizado de funcionamiento para el producto T_sin en la etapa PeladoMaquina en la hora 3 del dia Sabado: 138
-Su ratio real de funcionamiento  es: 2760
+Ratio normalizado de funcionamiento para el producto T_sin en la etapa PeladoMaquina en la hora 2 del dia Domingo: 74
+Su ratio real de funcionamiento  es: 1480
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto T_sin en la etapa PeladoMano en la hora 4 del dia Sabado: 138
-Su ratio real de funcionamiento  es: 2760
+Ratio normalizado de funcionamiento para el producto T_sin en la etapa PeladoMano en la hora 3 del dia Domingo: 74
+Su ratio real de funcionamiento  es: 1480
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto T_sin en la etapa Cortado en la hora 5 del dia Sabado: 138
-Su ratio real de funcionamiento  es: 2760
+Ratio normalizado de funcionamiento para el producto T_sin en la etapa Cortado en la hora 4 del dia Domingo: 74
+Su ratio real de funcionamiento  es: 1480
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto T_sin en la etapa Bandejas en la hora 9 del dia Sabado: 138
-Su ratio real de funcionamiento  es: 2760
+Ratio normalizado de funcionamiento para el producto T_sin en la etapa Bandejas en la hora 5 del dia Domingo: 74
+Su ratio real de funcionamiento  es: 1480
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto T_sin en la etapa Congelacion en la hora 10 del dia Sabado: 138
-Su ratio real de funcionamiento  es: 690
+Ratio normalizado de funcionamiento para el producto T_sin en la etapa Congelacion en la hora 6 del dia Domingo: 74
+Su ratio real de funcionamiento  es: 370
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto T_sin en la etapa Termosellado en la hora 12 del dia Sabado: 138
-Su ratio real de funcionamiento  es: 690
+Ratio normalizado de funcionamiento para el producto T_sin en la etapa Termosellado en la hora 7 del dia Domingo: 74
+Su ratio real de funcionamiento  es: 370
 _________________________________________________
-Ratio normalizado de funcionamiento para el producto T_sin en la etapa Cajas en la hora 14 del dia Sabado: 138
-Su ratio real de funcionamiento  es: 690
+Ratio normalizado de funcionamiento para el producto T_sin en la etapa Cajas en la hora 14 del dia Domingo: 74
+Su ratio real de funcionamiento  es: 370
 _________________________________________________
-
-Ratio normalizado de funcionamiento para el producto T_sin en la etapa PeladoMaquina en la hora 6 del dia Domingo: 32.6
-Su ratio real de funcionamiento  es: 652
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto T_sin en la etapa PeladoMano en la hora 7 del dia Domingo: 32.6
-Su ratio real de funcionamiento  es: 652
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto T_sin en la etapa Cortado en la hora 8 del dia Domingo: 32.6
-Su ratio real de funcionamiento  es: 652
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto T_sin en la etapa Bandejas en la hora 9 del dia Domingo: 32.6
-Su ratio real de funcionamiento  es: 652
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto T_sin en la etapa Congelacion en la hora 10 del dia Domingo: 32.6
-Su ratio real de funcionamiento  es: 163
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto T_sin en la etapa Termosellado en la hora 11 del dia Domingo: 32.6
-Su ratio real de funcionamiento  es: 163
-_________________________________________________
-Ratio normalizado de funcionamiento para el producto T_sin en la etapa Cajas en la hora 14 del dia Domingo: 32.6
-Su ratio real de funcionamiento  es: 163
-_________________________________________________
-
