@@ -1,6 +1,6 @@
 reset;
-model "grupo1Semana.mod";
-data "ProblemaEmpresa.dat";
+model "ProduccionL3P.mod";
+data "ProduccionL3P.dat";
 
 option solver gurobi;
 option gurobi_options 'timelim=300 outlev=1';
