@@ -51,10 +51,11 @@ param RatioMax {p in PRODUCTOS,e in Orden[p]} := RatioRealMax[p,e] / FactorConve
 
 /*********************/
 
-var Cantidad {p in PRODUCTOS, OrdenCompleto[p], HORAS, g in DIAS}>= 0, <= CantAlcach[g]/FactorConversion[p]; 
+
+var Cantidad {p in PRODUCTOS, OrdenCompleto[p], HORAS, g in DIAS} integer >= 0, <= CantAlcach[g]/FactorConversion[p]; 
 #Cantidad de producto que esta esperando en cierta etapa a una hora dada un dia determinado
 
-var Ratio {p in PRODUCTOS,e in Orden[p],HORAS, DIAS}>=0, <=RatioMax[p,e];
+var Ratio {p in PRODUCTOS,e in Orden[p],HORAS, DIAS} integer >=0, <=RatioMax[p,e];
 #Cantidad de producto que procesa una etapa en una hora dada un dia determinado
 
 var Ocupado {p in PRODUCTOS,Orden[p],HORAS, DIAS} binary;
@@ -63,8 +64,9 @@ var Ocupado {p in PRODUCTOS,Orden[p],HORAS, DIAS} binary;
 var Encendido {EtapasCoste,HORAS, DIAS} binary;
 #1 si la etapa dada esta encendida en la hora dada el dia indicado
 
-var Vender {p in PRODUCTOS,c in CLIENTES}>= DemandaMin[p,c], <=DemandaMax[p,c];
+var Vender {p in PRODUCTOS,c in CLIENTES} integer >= DemandaMin[p,c], <=DemandaMax[p,c];
 #Cantidad de producto vendido a un cliente
+
 
 /*******************/
 
