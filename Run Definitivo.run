@@ -1,0 +1,127 @@
+reset;
+model "grupo1Semana.mod";
+data "ProblemaEmpresa.dat";
+
+option solver gurobi;
+option gurobi_options 'presolve=2 outlev=1';
+solve;
+
+print("Crearemos las siguientes cantidades de producto para cada tipo distinto de ellos:");
+print("Crearemos las siguientes cantidades de producto para cada tipo distinto de ellos:") >> SalidaDatos.txt;
+for {p in PRODUCTOS} {
+    printf("Producto ");
+    printf("Producto ") >> SalidaDatos.txt;
+    printf(p);
+    printf(p) >> SalidaDatos.txt;
+    printf(" || ");
+    printf(" || ") >> SalidaDatos.txt;
+    printf("\n");
+    printf("\n") >> SalidaDatos.txt;
+
+    for {g in DIAS} {
+    printf(" dia ");
+    printf(" dia ") >> SalidaDatostxt;
+    printf(g);
+    printf(g) >> SalidaDatos.txt;
+    printf(": ");
+    printf(": ") >> SalidaDatos.txt;
+    printf(Cantidad[p,last(OrdenCompleto[p]),H,g]);
+    printf(Cantidad[p,last(OrdenCompleto[p]),H,g]) >> SalidaDatos.txt;
+    printf("\n");
+    printf("\n") >> SalidaDatos.txt;
+    }
+
+    printf("\n");
+    printf("\n") >> SalidaDatos.txt;
+
+}
+
+printf("\n");
+print("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_");
+printf("\n");
+
+printf("\n") >> SalidaDatos.txt;
+print("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_") >> SalidaDatos.txt;
+printf("\n") >> SalidaDatos.txt;
+
+print("Le venderemos a los clientes las siguientes cantidades:");
+print("Le venderemos a los clientes las siguientes cantidades:") >> SalidaDatos.txt;
+for {p in PRODUCTOS} {
+    printf("Producto ");
+    printf("Producto ") >> SalidaDatos.txt;
+    printf(p);
+    printf(p) >> SalidaDatos.txt;
+    printf(" || ");
+    printf(" || ") >> SalidaDatos.txt;
+    printf("\n");
+    printf("\n") >> SalidaDatos.txt;
+    
+    for {c in CLIENTES} {
+        printf(" cliente ");
+        printf(" cliente ") >> SalidaDatos.txt;
+        printf(c);
+        printf(c) >> SalidaDatos.txt;
+        printf(": ");
+        printf(": ") >> SalidaDatos.txt;
+        printf(Vender[p,c]);
+        printf(Vender[p,c]) >> SalidaDatos.txt;
+        printf("\n");
+        printf("\n") >> SalidaDatos.txt;
+    }
+
+    printf("\n");
+    printf("\n") >> SalidaDatos.txt;
+
+}
+
+printf("\n");
+print("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_");
+printf("\n");
+
+printf("\n") >> SalidaDatos.txt;
+print("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_") >> SalidaDatos.txt;
+printf("\n") >> SalidaDatos.txt;
+
+print("Impresion por pantalla de ratios de funcionamiento de las etapas por hora, dia y producto:");
+print("Impresion por pantalla de ratios de funcionamiento de las etapas por hora, dia y producto:") >> SalidaDatos.txt;
+for {p in PRODUCTOS, g in DIAS} {
+    for {e in Orden[p], h in HORAS} {
+        if Ratio[p,e,h,g] <> 0 then {
+            printf("Ratio normalizado de funcionamiento para el producto ");
+            printf("Ratio normalizado de funcionamiento para el producto ") >> SalidaDatos.txt;
+            printf(p);
+            printf(p) >> SalidaDatos.txt;
+            printf(" en la etapa ");
+            printf(" en la etapa ") >> SalidaDatos.txt;
+            printf(e);
+            printf(e) >> SalidaDatos.txt;
+            printf(" en la hora ");
+            printf(" en la hora ") >> SalidaDatos.txt;
+            printf(h);
+            printf(h) >> SalidaDatos.txt;
+            printf(" del dia ");
+            printf(" del dia ") >> SalidaDatos.txt;
+            printf(g);
+            printf(g) >> SalidaDatos.txt;
+            printf(": ");
+            printf(": ") >> SalidaDatos.txt;
+            printf(Ratio[p,e,h,g]);
+            printf(Ratio[p,e,h,g]) >> SalidaDatos.txt;
+            print("");
+            print("") >> SalidaDatos.txt;
+            
+            printf("Su ratio real de funcionamiento  es: ");
+            printf("Su ratio real de funcionamiento  es: ") >> SalidaDatos.txt;
+            printf(Ratio[p,e,h,g]*FactorConversion_ratio[p,e]);
+            printf(Ratio[p,e,h,g]*FactorConversion_ratio[p,e]) >> SalidaDatos.txt;
+            print("");
+            print("") >> SalidaDatos.txt;
+            print("_________________________________________________");
+            print("_________________________________________________") >> SalidaDatos.txt;
+        }
+    }
+    
+    print("");
+    print("") >> SalidaDatos.txt;
+
+}
