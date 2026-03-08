@@ -1,4 +1,4 @@
-Veneficios: 80285.2
+Beneficios: 80285.2
 
 Crearemos las siguientes cantidades de producto para cada tipo distinto de ellos:
 Producto B15_con || 
